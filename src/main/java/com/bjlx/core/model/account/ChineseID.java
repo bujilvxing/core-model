@@ -1,4 +1,4 @@
-package com.zjns.core.model.account;
+package com.bjlx.core.model.account;
 
 import javax.validation.constraints.Pattern;
 
