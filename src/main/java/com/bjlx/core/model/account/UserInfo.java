@@ -1,4 +1,4 @@
-package com.zjns.core.model.account;
+package com.bjlx.core.model.account;
 
 import java.util.Map;
 
@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-import com.zjns.core.model.misc.ImageItem;
+import com.bjlx.core.model.misc.ImageItem;
 
 /**
  * 用户数据
@@ -77,6 +77,11 @@ public class UserInfo {
 	 */
 	Map<String, RealNameInfo> travellers;
 
+	/**
+	 * 用户的状态
+	 */
+	private int status;
+	
 	public ObjectId getId() {
 		return id;
 	}
@@ -147,6 +152,14 @@ public class UserInfo {
 
 	public void setTravellers(Map<String, RealNameInfo> travellers) {
 		this.travellers = travellers;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	public UserInfo(long userId, PhoneNumber tel, String nickName, ImageItem avatar, String email) {

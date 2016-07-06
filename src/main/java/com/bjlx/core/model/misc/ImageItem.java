@@ -1,4 +1,4 @@
-package com.zjns.core.model.misc;
+package com.bjlx.core.model.misc;
 
 import javax.validation.constraints.Min;
 
