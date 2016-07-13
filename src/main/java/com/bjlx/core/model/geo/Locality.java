@@ -19,7 +19,7 @@ import com.bjlx.core.model.misc.ImageItem;
  *
  */
 @Entity
-class Locality {
+public class Locality {
 
 	/**
 	 * 主键

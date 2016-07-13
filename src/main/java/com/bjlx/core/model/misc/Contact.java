@@ -1,0 +1,74 @@
+package com.bjlx.core.model.misc;
+
+import java.util.List;
+
+import org.hibernate.validator.constraints.Email;
+
+public class Contact {
+
+	/**
+	 * 电话号码列表: 010-83671111
+	 */
+	private List<String> phoneList;
+
+	/**
+	 * 手机号列表: 13811111111
+	 */
+	private List<String> cellphoneList;
+
+	/**
+	 * 传真
+	 */
+	private String fax;
+
+	/**
+	 * 电子邮箱
+	 */
+	@Email
+	private String email;
+
+	/**
+	 * 网址
+	 */
+	private String website;
+
+	public List<String> getPhoneList() {
+		return phoneList;
+	}
+
+	public void setPhoneList(List<String> phoneList) {
+		this.phoneList = phoneList;
+	}
+
+	public List<String> getCellphoneList() {
+		return cellphoneList;
+	}
+
+	public void setCellphoneList(List<String> cellphoneList) {
+		this.cellphoneList = cellphoneList;
+	}
+
+	public String getFax() {
+		return fax;
+	}
+
+	public void setFax(String fax) {
+		this.fax = fax;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getWebsite() {
+		return website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+}
