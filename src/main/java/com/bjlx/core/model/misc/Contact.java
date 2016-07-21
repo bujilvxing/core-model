@@ -3,7 +3,9 @@ package com.bjlx.core.model.misc;
 import java.util.List;
 
 import org.hibernate.validator.constraints.Email;
+import org.mongodb.morphia.annotations.Embedded;
 
+@Embedded
 public class Contact {
 
 	/**
@@ -15,6 +17,21 @@ public class Contact {
 	 * 手机号列表: 13811111111
 	 */
 	private List<String> cellphoneList;
+
+	/**
+	 * qq号
+	 */
+	private String qq;
+
+	/**
+	 * 微信号
+	 */
+	private String weixin;
+
+	/**
+	 * 新浪微博
+	 */
+	private String sina;
 
 	/**
 	 * 传真
