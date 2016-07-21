@@ -16,3 +16,12 @@ hs_err_pid*
 .settings/*
 .classpath
 .project
+
+*.keystore
+*.iml
+*.class
+.idea
+logs
+project/project/target
+project/target
+target
