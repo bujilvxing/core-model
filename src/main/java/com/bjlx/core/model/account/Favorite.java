@@ -1,19 +1,20 @@
 package com.bjlx.core.model.account;
 
-import java.util.List;
+import org.bson.types.ObjectId;
+import org.hibernate.validator.constraints.NotBlank;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-
-import org.bson.types.ObjectId;
-import org.hibernate.validator.constraints.NotBlank;
-import org.mongodb.morphia.annotations.Id;
+import java.util.List;
 
 /**
  * 用户收藏
  * @author xiaozhi
  *
  */
+@Entity
 public class Favorite {
 	
 	/**

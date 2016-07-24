@@ -1,8 +1,8 @@
 package com.bjlx.core.model.account;
 
-import javax.validation.constraints.Pattern;
-
 import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.Pattern;
 
 /**
  * 由中国大陆颁发的身份证件
