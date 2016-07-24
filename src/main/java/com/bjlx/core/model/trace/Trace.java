@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
+import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
 import com.bjlx.core.model.misc.Audio;
@@ -19,6 +20,7 @@ import com.bjlx.core.model.misc.ImageItem;
  * @author xiaozhi
  *
  */
+@Entity
 public class Trace {
 
 	/**
