@@ -17,10 +17,13 @@ public class Credential {
     /**
      * 域名称，便于查询，以免输入有误
      */
+    @Transient
     public final static String fd_userId = "userId";
 
+    @Transient
     public final static String fd_salt = "salt";
 
+    @Transient
     public final static String fd_passwdHash = "passwdHash";
 
     /**

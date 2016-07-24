@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by pengyt on 2016/7/21.
+ * 活动
  */
 @Entity
 public class Activity {
@@ -114,7 +115,7 @@ public class Activity {
     /**
      * 报名人信息
      */
-    private Contact applicantInfo;
+    private List<Contact> applicantInfos;
 
     /**
      * 门票
@@ -257,12 +258,12 @@ public class Activity {
         this.desc = desc;
     }
 
-    public Contact getApplicantInfo() {
-        return applicantInfo;
+    public List<Contact> getApplicantInfos() {
+        return applicantInfos;
     }
 
-    public void setApplicantInfo(Contact applicantInfo) {
-        this.applicantInfo = applicantInfo;
+    public void setApplicantInfos(List<Contact> applicantInfos) {
+        this.applicantInfos = applicantInfos;
     }
 
     public List<Ticket> getTickets() {

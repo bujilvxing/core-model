@@ -100,6 +100,11 @@ public class Chatgroup {
     private boolean visible = true;
 
     /**
+     * 群等级
+     */
+    private int level;
+
+    /**
      * 域名称，便于查询，以免输入有误
      */
     public final static String fd_id = "id";

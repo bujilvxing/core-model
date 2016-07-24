@@ -1,5 +1,14 @@
 package com.bjlx.core.model.account;
 
+import com.bjlx.core.model.activity.Activity;
+import com.bjlx.core.model.marketplace.Commodity;
+import com.bjlx.core.model.misc.TravelNote;
+import com.bjlx.core.model.poi.Hotel;
+import com.bjlx.core.model.poi.Restaurant;
+import com.bjlx.core.model.poi.Viewspot;
+import com.bjlx.core.model.quora.Question;
+import com.bjlx.core.model.trace.Trace;
+import com.bjlx.core.model.tripplan.TripPlan;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
@@ -34,47 +43,48 @@ public class Favorite {
 	/**
 	 * 用户收藏的足迹
 	 */
-	private List<ObjectId> traces;
+	private List<Trace> traces;
 	
 	/**
 	 * 用户收藏的形成规划
 	 */
-	private List<ObjectId> tripPlans;
+	private List<TripPlan> tripPlans;
 	
 	/**
 	 * 用户收藏的活动
 	 */
-	private List<ObjectId>  activities;
+	private List<Activity>  activities;
 	
 	/**
 	 * 用户收藏的问答
 	 */
-	private List<ObjectId>  quoras;
+	private List<Question>  quoras;
 	
 	/**
 	 * 用户收藏的美食
 	 */
-	private List<ObjectId>  restaurants;
+	private List<Restaurant>  restaurants;
 	
 	/**
 	 * 用户收藏的客栈
 	 */
-	private List<ObjectId>  hotels;
+	private List<Hotel>  hotels;
 	
 	/**
 	 * 用户收藏的游记
 	 */
-	private List<ObjectId>  travelNotes;
+	private List<TravelNote>  travelNotes;
 	
 	/**
 	 * 用户收藏的商品
 	 */
-	private List<ObjectId>  commodities;
+	private List<Commodity>  commodities;
 	
 	/**
 	 * 用户收藏的景点
 	 */
-	private List<ObjectId>  viewspots;
+	private List<Viewspot>  viewspots;
+
 
 	public ObjectId getId() {
 		return id;
@@ -92,77 +102,75 @@ public class Favorite {
 		this.userId = userId;
 	}
 
-	public List<ObjectId> getTraces() {
+	public List<Trace> getTraces() {
 		return traces;
 	}
 
-	public void setTraces(List<ObjectId> traces) {
+	public void setTraces(List<Trace> traces) {
 		this.traces = traces;
 	}
 
-	public List<ObjectId> getTripPlans() {
+	public List<TripPlan> getTripPlans() {
 		return tripPlans;
 	}
 
-	public void setTripPlans(List<ObjectId> tripPlans) {
+	public void setTripPlans(List<TripPlan> tripPlans) {
 		this.tripPlans = tripPlans;
 	}
 
-	public List<ObjectId> getActivities() {
+	public List<Activity> getActivities() {
 		return activities;
 	}
 
-	public void setActivities(List<ObjectId> activities) {
+	public void setActivities(List<Activity> activities) {
 		this.activities = activities;
 	}
 
-	public List<ObjectId> getQuoras() {
+	public List<Question> getQuoras() {
 		return quoras;
 	}
 
-	public void setQuoras(List<ObjectId> quoras) {
+	public void setQuoras(List<Question> quoras) {
 		this.quoras = quoras;
 	}
 
-	public List<ObjectId> getRestaurants() {
+	public List<Restaurant> getRestaurants() {
 		return restaurants;
 	}
 
-	public void setRestaurants(List<ObjectId> restaurants) {
+	public void setRestaurants(List<Restaurant> restaurants) {
 		this.restaurants = restaurants;
 	}
 
-	public List<ObjectId> getHotels() {
+	public List<Hotel> getHotels() {
 		return hotels;
 	}
 
-	public void setHotels(List<ObjectId> hotels) {
+	public void setHotels(List<Hotel> hotels) {
 		this.hotels = hotels;
 	}
 
-	public List<ObjectId> getTravelNotes() {
+	public List<TravelNote> getTravelNotes() {
 		return travelNotes;
 	}
 
-	public void setTravelNotes(List<ObjectId> travelNotes) {
+	public void setTravelNotes(List<TravelNote> travelNotes) {
 		this.travelNotes = travelNotes;
 	}
 
-	public List<ObjectId> getCommodities() {
+	public List<Commodity> getCommodities() {
 		return commodities;
 	}
 
-	public void setCommodities(List<ObjectId> commodities) {
+	public void setCommodities(List<Commodity> commodities) {
 		this.commodities = commodities;
 	}
 
-	public List<ObjectId> getViewspots() {
+	public List<Viewspot> getViewspots() {
 		return viewspots;
 	}
 
-	public void setViewspots(List<ObjectId> viewspots) {
+	public void setViewspots(List<Viewspot> viewspots) {
 		this.viewspots = viewspots;
 	}
-	
-	
 }

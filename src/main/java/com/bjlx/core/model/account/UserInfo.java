@@ -1,6 +1,10 @@
 package com.bjlx.core.model.account;
 
+import com.bjlx.core.model.activity.Activity;
 import com.bjlx.core.model.misc.ImageItem;
+import com.bjlx.core.model.misc.TravelNote;
+import com.bjlx.core.model.trace.Trace;
+import com.bjlx.core.model.tripplan.TripPlan;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
@@ -141,6 +145,46 @@ public class UserInfo {
 	 * 第三方账号的信息
 	 */
 	List<OAuthInfo> oauthInfoList = null;
+
+	/**
+	 * 用户等级
+	 */
+	private int level;
+
+	/**
+	 * 用户足迹
+	 */
+	private List<Trace> traces;
+
+	/**
+	 * 用户发布的活动
+	 */
+	private List<Activity> activities;
+
+	/**
+	 * 用户发表的游记
+	 */
+	private List<TravelNote> travelNotes;
+
+	/**
+	 * 用户发布的行程规划
+	 */
+	private List<TripPlan> tripPlans;
+
+	/**
+	 * 星座
+	 */
+	private int zodiac;
+
+	/**
+	 * 设置声音提醒
+	 */
+	private boolean soundNotify;
+
+	/**
+	 * 设置振动提醒
+	 */
+	private boolean vibrateNotify;
 
 	public ObjectId getId() {
 		return id;
