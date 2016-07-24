@@ -1,18 +1,16 @@
 package com.bjlx.core.model.account;
 
-import java.util.Map;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
+import com.bjlx.core.model.misc.ImageItem;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.*;
 
-import com.bjlx.core.model.misc.ImageItem;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 用户数据
@@ -81,7 +79,69 @@ public class UserInfo {
 	 * 用户的状态
 	 */
 	private int status;
-	
+
+	/**
+	 * 邀请码。每个人有全局唯一的一个邀请码，用于分享平台内容时奖励
+	 */
+	@NotBlank
+	@Indexed(unique = true)
+	String promotionCode;
+
+	/**
+	 * 登录的状态，是否在线
+	 */
+	@NotNull
+	boolean loginStatus = false;
+
+	/**
+	 * 登录时间
+	 */
+	@NotNull
+	long loginTime = 0;
+
+	/**
+	 * 登出时间
+	 */
+	@NotNull
+	long logoutTime = 0;
+
+	/**
+	 * 登录设备来源
+	 */
+	List<String> loginSource = null;
+
+	/**
+	 * 设备版本
+	 */
+	@Version
+	long version = 0;
+
+	/**
+	 * 用户角色。普通用户，商家等等
+	 */
+	List<Integer> roles = null;
+
+	/**
+	 * 用户备注。此字段为Transient，是不存入数据库的，但是取用户数据的时候，可以将给此字段赋值，为了返回用户信息的
+	 */
+	@Transient
+	String memo = null;
+
+	/**
+	 * 用户的居住地
+	 */
+	String residence = null;
+
+	/**
+	 * 用户的生日
+	 */
+	String birthday  = null;
+
+	/**
+	 * 第三方账号的信息
+	 */
+	List<OAuthInfo> oauthInfoList = null;
+
 	public ObjectId getId() {
 		return id;
 	}
@@ -160,6 +220,94 @@ public class UserInfo {
 
 	public void setStatus(int status) {
 		this.status = status;
+	}
+
+	public String getPromotionCode() {
+		return promotionCode;
+	}
+
+	public void setPromotionCode(String promotionCode) {
+		this.promotionCode = promotionCode;
+	}
+
+	public boolean isLoginStatus() {
+		return loginStatus;
+	}
+
+	public void setLoginStatus(boolean loginStatus) {
+		this.loginStatus = loginStatus;
+	}
+
+	public long getLoginTime() {
+		return loginTime;
+	}
+
+	public void setLoginTime(long loginTime) {
+		this.loginTime = loginTime;
+	}
+
+	public long getLogoutTime() {
+		return logoutTime;
+	}
+
+	public void setLogoutTime(long logoutTime) {
+		this.logoutTime = logoutTime;
+	}
+
+	public List<String> getLoginSource() {
+		return loginSource;
+	}
+
+	public void setLoginSource(List<String> loginSource) {
+		this.loginSource = loginSource;
+	}
+
+	public long getVersion() {
+		return version;
+	}
+
+	public void setVersion(long version) {
+		this.version = version;
+	}
+
+	public List<Integer> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Integer> roles) {
+		this.roles = roles;
+	}
+
+	public String getMemo() {
+		return memo;
+	}
+
+	public void setMemo(String memo) {
+		this.memo = memo;
+	}
+
+	public String getResidence() {
+		return residence;
+	}
+
+	public void setResidence(String residence) {
+		this.residence = residence;
+	}
+
+	public String getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+
+	public List<OAuthInfo> getOauthInfoList() {
+		return oauthInfoList;
+	}
+
+	public void setOauthInfoList(List<OAuthInfo> oauthInfoList) {
+		this.oauthInfoList = oauthInfoList;
 	}
 
 	public UserInfo(long userId, PhoneNumber tel, String nickName, ImageItem avatar, String email) {

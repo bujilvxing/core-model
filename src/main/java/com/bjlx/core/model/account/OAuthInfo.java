@@ -1,7 +1,14 @@
 package com.bjlx.core.model.account;
 
+import org.mongodb.morphia.annotations.Embedded;
+import org.mongodb.morphia.annotations.Indexed;
+
 import javax.validation.constraints.NotNull;
 
+/**
+ * 第三方平台用户信息
+ */
+@Embedded
 public class OAuthInfo {
 	
 	/**
@@ -13,6 +20,7 @@ public class OAuthInfo {
     /**
      * 用户在第三方账号体系中的id
      */
+	@Indexed
     @NotNull
     private String oauthId;
 
@@ -69,6 +77,14 @@ public class OAuthInfo {
 	}
 
 	public void setToken(String token) {
+		this.token = token;
+	}
+
+	public OAuthInfo(String provider, String oauthId, String nickName, String avatar, String token) {
+		this.provider = provider;
+		this.oauthId = oauthId;
+		this.nickName = nickName;
+		this.avatar = avatar;
 		this.token = token;
 	}
 }
