@@ -99,6 +99,21 @@ public class Chatgroup {
     @NotNull
     private boolean visible = true;
 
+    /**
+     * 域名称，便于查询，以免输入有误
+     */
+    public final static String fd_id = "id";
+    public final static String fd_chatGroupId = "chatGroupId";
+    public final static String fd_name = "name";
+    public final static String fd_groupDesc = "groupDesc";
+    public final static String fd_avatar = "avatar";
+    public final static String fd_tags = "tags";
+    public final static String fd_creator = "creator";
+    public final static String fd_admins = "admins";
+    public final static String fd_maxUsers = "maxUsers";
+    public final static String fd_visible = "visible";
+    public final static String fd_participants = "participants";
+
     public ObjectId getId() {
         return id;
     }
