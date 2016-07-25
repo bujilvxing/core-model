@@ -38,7 +38,7 @@ public class Favorite {
 	 */
 	@NotNull
 	@Min(value = 1)
-	private long userId;
+	private Long userId;
 
 	/**
 	 * 用户收藏的足迹
@@ -94,11 +94,11 @@ public class Favorite {
 		this.id = id;
 	}
 
-	public long getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(long userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 

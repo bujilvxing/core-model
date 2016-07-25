@@ -13,24 +13,24 @@ public class PhoneNumber {
 	/**
 	 * 国家区域号码
 	 */
-	private int dialCode = 86;
+	private Integer dialCode = 86;
 	
 	/**
 	 * 手机号
 	 */
 	private String number;
 
-	public PhoneNumber(int dialCode, String number) {
+	public PhoneNumber(Integer dialCode, String number) {
 		super();
 		this.dialCode = dialCode;
 		this.number = number;
 	}
 
-	public int getDialCode() {
+	public Integer getDialCode() {
 		return dialCode;
 	}
 
-	public void setDialCode(int dialCode) {
+	public void setDialCode(Integer dialCode) {
 		this.dialCode = dialCode;
 	}
 

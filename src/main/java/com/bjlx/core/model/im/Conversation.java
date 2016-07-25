@@ -4,9 +4,9 @@ import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.Transient;
 
 import javax.validation.constraints.NotNull;
-import org.mongodb.morphia.annotations.Transient;
 import java.util.List;
 
 /**
@@ -31,7 +31,7 @@ public class Conversation {
     /**
      * 消息数量
      */
-    private long msgCounter = 0L;
+    private Long msgCounter = 0L;
 
     /**
      * 会话id。单聊为两个用户的id,例如：10001,10002   群组为群组的id
@@ -42,18 +42,18 @@ public class Conversation {
      * 会话创建时间
      */
     @NotNull
-    private long createTime = 0;
+    private Long createTime = 0L;
 
     /**
      * 会话更新时间
      */
     @NotNull
-    private long updateTime = 0;
+    private Long updateTime = 0L;
 
     /**
      * 有多少条未读信息
      */
-    private int unreadCnt = 0;
+    private Integer unreadCnt = 0;
 
     /**
      * 最后一条消息的内容
@@ -81,7 +81,7 @@ public class Conversation {
      * 非空conversation所对应的用户id
      */
     @Transient
-    private long targetId = 0;
+    private Long targetId = 0L;
 
     public ObjectId getId() {
         return id;
@@ -99,27 +99,27 @@ public class Conversation {
         this.chatType = chatType;
     }
 
-    public long getMsgCounter() {
+    public Long getMsgCounter() {
         return msgCounter;
     }
 
-    public void setMsgCounter(long msgCounter) {
+    public void setMsgCounter(Long msgCounter) {
         this.msgCounter = msgCounter;
     }
 
-    public long getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(long createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
-    public long getUpdateTime() {
+    public Long getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(long updateTime) {
+    public void setUpdateTime(Long updateTime) {
         this.updateTime = updateTime;
     }
 
@@ -147,11 +147,11 @@ public class Conversation {
         this.pinned = pinned;
     }
 
-    public long getTargetId() {
+    public Long getTargetId() {
         return targetId;
     }
 
-    public void setTargetId(long targetId) {
+    public void setTargetId(Long targetId) {
         this.targetId = targetId;
     }
 
@@ -163,7 +163,7 @@ public class Conversation {
         this.conversationId = conversationId;
     }
 
-    public Conversation(ObjectId id, String conversationId, String chatType, long createTime) {
+    public Conversation(ObjectId id, String conversationId, String chatType, Long createTime) {
         this.id = id;
         this.conversationId = conversationId;
         this.chatType = chatType;

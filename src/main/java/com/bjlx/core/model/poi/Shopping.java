@@ -1,17 +1,15 @@
 package com.bjlx.core.model.poi;
 
-import java.util.List;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-
+import com.bjlx.core.model.geo.Locality;
+import com.bjlx.core.model.misc.Contact;
+import com.bjlx.core.model.misc.ImageItem;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Id;
 
-import com.bjlx.core.model.geo.Locality;
-import com.bjlx.core.model.misc.Contact;
-import com.bjlx.core.model.misc.ImageItem;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import java.util.List;
 
 public class Shopping {
 
@@ -27,14 +25,14 @@ public class Shopping {
 	 */
 	@Min(value = -90)
 	@Max(value = 90)
-	private double lat;
+	private Double lat;
 	
 	/**
 	 * 纬度
 	 */
 	@Min(value = -180)
 	@Max(value = 180)
-	private double lng;
+	private Double lng;
 	
 	/**
 	 * 封面图
@@ -50,19 +48,19 @@ public class Shopping {
 	 * 排名
 	 */
 	@Min(value = 1)
-	private int rank;
+	private Integer rank;
 	
 	/**
 	 * 热门程度
 	 */
 	@Min(value = 0)
-	private double hotness = 0.0;
+	private Double hotness = 0.0;
 	
 	/**
 	 * 评分
 	 */
 	@Min(value = 0)
-	private double rating = 0.0;
+	private Double rating = 0.0;
 	
 	/**
 	 * POI联系信息
@@ -91,7 +89,7 @@ public class Shopping {
 	 * POI价格
 	 */
 	@NotBlank
-	private double price = 0.0;
+	private Double price = 0.0;
 	
 	/**
 	 * POI价格描述
@@ -165,19 +163,19 @@ public class Shopping {
 		this.id = id;
 	}
 
-	public double getLat() {
+	public Double getLat() {
 		return lat;
 	}
 
-	public void setLat(double lat) {
+	public void setLat(Double lat) {
 		this.lat = lat;
 	}
 
-	public double getLng() {
+	public Double getLng() {
 		return lng;
 	}
 
-	public void setLng(double lng) {
+	public void setLng(Double lng) {
 		this.lng = lng;
 	}
 
@@ -197,27 +195,27 @@ public class Shopping {
 		this.images = images;
 	}
 
-	public int getRank() {
+	public Integer getRank() {
 		return rank;
 	}
 
-	public void setRank(int rank) {
+	public void setRank(Integer rank) {
 		this.rank = rank;
 	}
 
-	public double getHotness() {
+	public Double getHotness() {
 		return hotness;
 	}
 
-	public void setHotness(double hotness) {
+	public void setHotness(Double hotness) {
 		this.hotness = hotness;
 	}
 
-	public double getRating() {
+	public Double getRating() {
 		return rating;
 	}
 
-	public void setRating(double rating) {
+	public void setRating(Double rating) {
 		this.rating = rating;
 	}
 
@@ -253,11 +251,11 @@ public class Shopping {
 		this.url = url;
 	}
 
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 

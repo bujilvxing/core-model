@@ -38,7 +38,7 @@ public class Credential {
     @NotNull
     @Min(value = 1)
     @Indexed(unique = true)
-    private long userId;
+    private Long userId;
 
     /**
      * 盐，用于生成密码的密文
@@ -56,7 +56,7 @@ public class Credential {
      */
     @Min(1)
     @Max(1)
-    private int method = 1;
+    private Integer method = 1;
 
     /**
      * 用户的授权码
@@ -73,11 +73,11 @@ public class Credential {
         this.id = id;
     }
 
-    public long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -97,11 +97,11 @@ public class Credential {
         this.passwdHash = passwdHash;
     }
 
-    public int getMethod() {
+    public Integer getMethod() {
         return method;
     }
 
-    public void setMethod(int method) {
+    public void setMethod(Integer method) {
         this.method = method;
     }
 
@@ -113,7 +113,7 @@ public class Credential {
         this.secretKey = secretKey;
     }
 
-    public Credential(long userId, String salt, String passwdHash, SecretKey secretKey) {
+    public Credential(Long userId, String salt, String passwdHash, SecretKey secretKey) {
         this.id = new ObjectId();
         this.userId = userId;
         this.salt = salt;

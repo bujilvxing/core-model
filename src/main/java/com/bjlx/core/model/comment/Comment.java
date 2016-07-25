@@ -1,13 +1,11 @@
 package com.bjlx.core.model.comment;
 
-import java.util.Date;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Id;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 public class Comment {
 
@@ -22,14 +20,14 @@ public class Comment {
 	 * 评分
 	 */
 	@Min(value = 0)
-	private double rating = 0.0;
+	private Double rating = 0.0;
 	
 	/**
 	 * 用户ID
 	 */
 	@NotNull
 	@Min(value = 1)
-	private long userId = 0;
+	private Long userId = 0L;
 
 	/**
 	 * 用户头像
@@ -51,13 +49,13 @@ public class Comment {
 	 * 评论发表时间
 	 */
 	@NotNull
-	private Date publishTime;
+	private Long publishTime;
 
 	/**
 	 * 评论修改时间
 	 */
 	@NotNull
-	private Date mTime;
+	private Long updateTime;
 
 	public ObjectId getId() {
 		return id;
@@ -67,19 +65,19 @@ public class Comment {
 		this.id = id;
 	}
 
-	public double getRating() {
+	public Double getRating() {
 		return rating;
 	}
 
-	public void setRating(double rating) {
+	public void setRating(Double rating) {
 		this.rating = rating;
 	}
 
-	public long getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(long userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -107,19 +105,19 @@ public class Comment {
 		this.contents = contents;
 	}
 
-	public Date getPublishTime() {
+	public Long getPublishTime() {
 		return publishTime;
 	}
 
-	public void setPublishTime(Date publishTime) {
+	public void setPublishTime(Long publishTime) {
 		this.publishTime = publishTime;
 	}
 
-	public Date getmTime() {
-		return mTime;
+	public Long getmTime() {
+		return updateTime;
 	}
 
-	public void setmTime(Date mTime) {
-		this.mTime = mTime;
+	public void setmTime(Long updateTime) {
+		this.updateTime = updateTime;
 	}
 }

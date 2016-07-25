@@ -1,14 +1,13 @@
 package com.bjlx.core.model.misc;
 
-import java.util.Date;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.URL;
 import org.mongodb.morphia.annotations.Id;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import java.util.Date;
 
 public class Audio {
 
@@ -24,7 +23,7 @@ public class Audio {
 	 */
 	@Min(value = 0)
 	@Max(value = 60)
-	private int length;
+	private Integer length;
 	
 	/**
 	 * 创建时间
@@ -55,11 +54,11 @@ public class Audio {
 		this.id = id;
 	}
 
-	public int getLength() {
+	public Integer getLength() {
 		return length;
 	}
 
-	public void setLength(int length) {
+	public void setLength(Integer length) {
 		this.length = length;
 	}
 

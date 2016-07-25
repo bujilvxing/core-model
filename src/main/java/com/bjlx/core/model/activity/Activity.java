@@ -10,7 +10,6 @@ import org.mongodb.morphia.annotations.Id;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -46,12 +45,12 @@ public class Activity {
     /**
      * 开始时间
      */
-    private Date startTime;
+    private Long startTime;
 
     /**
      * 结束时间
      */
-    private Date endTime;
+    private Long endTime;
 
     /**
      * 活动地点
@@ -62,25 +61,25 @@ public class Activity {
      * 收藏次数
      */
     @Min(value = 0)
-    private int favorCnt = 0;
+    private Integer favorCnt = 0;
 
     /**
      * 评论次数
      */
     @Min(value = 0)
-    private int commentCnt = 0;
+    private Integer commentCnt = 0;
 
     /**
      * 浏览次数
      */
     @Min(value = 0)
-    private int viewCnt = 0;
+    private Integer viewCnt = 0;
 
     /**
      * 分享次数
      */
     @Min(value = 0)
-    private int shareCnt = 0;
+    private Integer shareCnt = 0;
 
     /**
      * 海报
@@ -105,7 +104,7 @@ public class Activity {
     /**
      * 活动是否为隐私活动，1表示不可见，2表示可见
      */
-    private int visiable = 1;
+    private Integer visiable = 1;
 
     /**
      * 活动详情
@@ -154,19 +153,19 @@ public class Activity {
         this.joinNum = joinNum;
     }
 
-    public Date getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
 
-    public Date getEndTime() {
+    public Long getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(Long endTime) {
         this.endTime = endTime;
     }
 
@@ -274,7 +273,7 @@ public class Activity {
         this.tickets = tickets;
     }
 
-    public Activity(String title, int maxNum, Date startTime, Date endTime, Address address, String theme, String category) {
+    public Activity(String title, int maxNum, Long startTime, Long endTime, Address address, String theme, String category) {
         this.id = new ObjectId();
         this.title = title;
         this.maxNum = maxNum;

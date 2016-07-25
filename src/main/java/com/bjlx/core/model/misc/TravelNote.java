@@ -1,17 +1,16 @@
 package com.bjlx.core.model.misc;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 @Entity
 public class TravelNote {
@@ -38,10 +37,10 @@ public class TravelNote {
 	 */
 	@Max(value = 1)
 	@Min(value = 0)
-	double rating = 0.0;
+	Double rating = 0.0;
 	
 	@Min(value = 0)
-	double hotness = 0.0;
+	Double hotness = 0.0;
 
 	/**
 	 * 游记标题
@@ -59,31 +58,31 @@ public class TravelNote {
 	 * 收藏次数
 	 */
 	@Min(value = 0)
-	private int favorCnt = 0;
+	private Integer favorCnt = 0;
 
 	/**
 	 * 评论次数
 	 */
 	@Min(value = 0)
-	private int commentCnt = 0;
+	private Integer commentCnt = 0;
 
 	/**
 	 * 浏览次数
 	 */
 	@Min(value = 0)
-	private int viewCnt = 0;
+	private Integer viewCnt = 0;
 
 	/**
 	 * 分享次数
 	 */
 	@Min(value = 0)
-	private int shareCnt = 0;
+	private Integer shareCnt = 0;
 
 	/**
 	 * 出游的时间
 	 */
 	@NotNull
-	Date travelTime;
+	Long travelTime;
 
 	/**
 	 * 游记摘要
@@ -130,19 +129,19 @@ public class TravelNote {
 		this.images = images;
 	}
 
-	public double getRating() {
+	public Double getRating() {
 		return rating;
 	}
 
-	public void setRating(double rating) {
+	public void setRating(Double rating) {
 		this.rating = rating;
 	}
 
-	public double getHotness() {
+	public Double getHotness() {
 		return hotness;
 	}
 
-	public void setHotness(double hotness) {
+	public void setHotness(Double hotness) {
 		this.hotness = hotness;
 	}
 
@@ -162,43 +161,43 @@ public class TravelNote {
 		this.publishTime = publishTime;
 	}
 
-	public int getFavorCnt() {
+	public Integer getFavorCnt() {
 		return favorCnt;
 	}
 
-	public void setFavorCnt(int favorCnt) {
+	public void setFavorCnt(Integer favorCnt) {
 		this.favorCnt = favorCnt;
 	}
 
-	public int getCommentCnt() {
+	public Integer getCommentCnt() {
 		return commentCnt;
 	}
 
-	public void setCommentCnt(int commentCnt) {
+	public void setCommentCnt(Integer commentCnt) {
 		this.commentCnt = commentCnt;
 	}
 
-	public int getViewCnt() {
+	public Integer getViewCnt() {
 		return viewCnt;
 	}
 
-	public void setViewCnt(int viewCnt) {
+	public void setViewCnt(Integer viewCnt) {
 		this.viewCnt = viewCnt;
 	}
 
-	public int getShareCnt() {
+	public Integer getShareCnt() {
 		return shareCnt;
 	}
 
-	public void setShareCnt(int shareCnt) {
+	public void setShareCnt(Integer shareCnt) {
 		this.shareCnt = shareCnt;
 	}
 
-	public Date getTravelTime() {
+	public Long getTravelTime() {
 		return travelTime;
 	}
 
-	public void setTravelTime(Date travelTime) {
+	public void setTravelTime(Long travelTime) {
 		this.travelTime = travelTime;
 	}
 
@@ -234,8 +233,8 @@ public class TravelNote {
 		this.essence = essence;
 	}
 
-	public TravelNote(ObjectId id, ImageItem cover, List<ImageItem> images, double hotness, String title,
-			Date publishTime, int commentCnt, Date travelTime, String summary, List<Map<String, String>> contents,
+	public TravelNote(ObjectId id, ImageItem cover, List<ImageItem> images, Double hotness, String title,
+			Date publishTime, Integer commentCnt, Long travelTime, String summary, List<Map<String, String>> contents,
 			String source, boolean essence) {
 		super();
 		this.id = id;

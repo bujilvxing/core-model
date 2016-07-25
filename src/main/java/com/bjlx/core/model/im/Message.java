@@ -8,7 +8,6 @@ import org.mongodb.morphia.annotations.Indexed;
 import org.mongodb.morphia.annotations.Transient;
 
 import javax.validation.constraints.NotNull;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,7 +35,7 @@ public class Message {
      */
     @NotNull
     @Indexed
-    private long msgId;
+    private Long msgId;
 
     /**
      * 消息内容
@@ -46,12 +45,12 @@ public class Message {
     /**
      * 发送者id
      */
-    private long senderId;
+    private Long senderId;
 
     /**
      * 单聊时，表示接收者用户id。群聊时，表示群组的id
      */
-    private long receiverId;
+    private Long receiverId;
 
     /**
      * 发送者昵称
@@ -66,7 +65,7 @@ public class Message {
     /**
      * 消息类型
      */
-    private int msgType;
+    private Integer msgType;
 
     /**
      * 消息摘要
@@ -77,7 +76,7 @@ public class Message {
     /**
      * 消息创建时间
      */
-    private long timestamp;
+    private Long timestamp;
 
     /**
      * 群聊时，所有接收消息的人的id
@@ -100,11 +99,11 @@ public class Message {
         this.conversation = conversation;
     }
 
-    public long getMsgId() {
+    public Long getMsgId() {
         return msgId;
     }
 
-    public void setMsgId(long msgId) {
+    public void setMsgId(Long msgId) {
         this.msgId = msgId;
     }
 
@@ -116,19 +115,19 @@ public class Message {
         this.content = content;
     }
 
-    public long getSenderId() {
+    public Long getSenderId() {
         return senderId;
     }
 
-    public void setSenderId(long senderId) {
+    public void setSenderId(Long senderId) {
         this.senderId = senderId;
     }
 
-    public long getReceiverId() {
+    public Long getReceiverId() {
         return receiverId;
     }
 
-    public void setReceiverId(long receiverId) {
+    public void setReceiverId(Long receiverId) {
         this.receiverId = receiverId;
     }
 
@@ -148,11 +147,11 @@ public class Message {
         this.senderAvatar = senderAvatar;
     }
 
-    public int getMsgType() {
+    public Integer getMsgType() {
         return msgType;
     }
 
-    public void setMsgType(int msgType) {
+    public void setMsgType(Integer msgType) {
         this.msgType = msgType;
     }
 
@@ -164,11 +163,11 @@ public class Message {
         this.abbrev = abbrev;
     }
 
-    public long getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 

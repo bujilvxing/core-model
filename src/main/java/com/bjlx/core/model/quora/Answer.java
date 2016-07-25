@@ -20,14 +20,14 @@ public class Answer extends AbstractQuoraEntry {
 	 * 被赞的次数
 	 */
 	@Min(value = 0)
-	private int voteCnt = 0;
+	private Integer voteCnt = 0;
 
 	/**
 	 * 该回答是否被采纳
 	 */
 	boolean accepted = false;
 
-	public Answer(Question question, int voteCnt, boolean accepted) {
+	public Answer(Question question, Integer voteCnt, boolean accepted) {
 		super();
 		this.question = question;
 		this.voteCnt = voteCnt;
@@ -42,11 +42,11 @@ public class Answer extends AbstractQuoraEntry {
 		this.question = question;
 	}
 
-	public int getVoteCnt() {
+	public Integer getVoteCnt() {
 		return voteCnt;
 	}
 
-	public void setVoteCnt(int voteCnt) {
+	public void setVoteCnt(Integer voteCnt) {
 		this.voteCnt = voteCnt;
 	}
 

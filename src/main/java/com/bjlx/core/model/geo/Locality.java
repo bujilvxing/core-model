@@ -1,17 +1,15 @@
 package com.bjlx.core.model.geo;
 
-import java.util.List;
-import java.util.Set;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-
+import com.bjlx.core.model.misc.ImageItem;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-import com.bjlx.core.model.misc.ImageItem;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import java.util.List;
+import java.util.Set;
 
 /**
  * 目的地(城市)
@@ -53,20 +51,20 @@ public class Locality {
 	 */
 	@Min(value = -90)
 	@Max(value = 90)
-	private double lat;
+	private Double lat;
 	
 	/**
 	 * 纬度
 	 */
 	@Min(value = -180)
 	@Max(value = 180)
-	private double lng;
+	private Double lng;
 
 	/**
 	 * 排名
 	 */
 	@Min(value = 1)
-	private int rank;
+	private Integer rank;
 
 	/**
 	 * 外部交通信息。每个entry都是一个tip，为HTML格式
@@ -127,31 +125,31 @@ public class Locality {
 	 * 去过的人数
 	 */
 	@Min(value = 0)
-	private int visitCnt = 0;
+	private Integer visitCnt = 0;
 
 	/**
 	 * 评论条数
 	 */
 	@Min(value = 0)
-	private int commentCnt = 0;
+	private Integer commentCnt = 0;
 
 	/**
 	 * 收藏次数
 	 */
 	@Min(value = 0)
-	private int favorCnt;
+	private Integer favorCnt;
 
 	/**
 	 * 热门程度
 	 */
 	@Min(value = 0)
-	private double hotness = 0.0;
+	private Double hotness = 0.0;
 
 	/**
 	 * 评分
 	 */
 	@Min(value = 0)
-	private double rating = 0.0;
+	private Double rating = 0.0;
 
 	/**
 	 * 父行政区
@@ -182,7 +180,7 @@ public class Locality {
 	 * 建议游玩时间（单位为小时）
 	 */
 	@Min(value = 0)
-	private int timeCost = 0;
+	private Integer timeCost = 0;
 
 	public ObjectId getId() {
 		return id;
@@ -224,27 +222,27 @@ public class Locality {
 		this.images = images;
 	}
 
-	public double getLat() {
+	public Double getLat() {
 		return lat;
 	}
 
-	public void setLat(double lat) {
+	public void setLat(Double lat) {
 		this.lat = lat;
 	}
 
-	public double getLng() {
+	public Double getLng() {
 		return lng;
 	}
 
-	public void setLng(double lng) {
+	public void setLng(Double lng) {
 		this.lng = lng;
 	}
 
-	public int getRank() {
+	public Integer getRank() {
 		return rank;
 	}
 
-	public void setRank(int rank) {
+	public void setRank(Integer rank) {
 		this.rank = rank;
 	}
 
@@ -336,43 +334,43 @@ public class Locality {
 		this.alias = alias;
 	}
 
-	public int getVisitCnt() {
+	public Integer getVisitCnt() {
 		return visitCnt;
 	}
 
-	public void setVisitCnt(int visitCnt) {
+	public void setVisitCnt(Integer visitCnt) {
 		this.visitCnt = visitCnt;
 	}
 
-	public int getCommentCnt() {
+	public Integer getCommentCnt() {
 		return commentCnt;
 	}
 
-	public void setCommentCnt(int commentCnt) {
+	public void setCommentCnt(Integer commentCnt) {
 		this.commentCnt = commentCnt;
 	}
 
-	public int getFavorCnt() {
+	public Integer getFavorCnt() {
 		return favorCnt;
 	}
 
-	public void setFavorCnt(int favorCnt) {
+	public void setFavorCnt(Integer favorCnt) {
 		this.favorCnt = favorCnt;
 	}
 
-	public double getHotness() {
+	public Double getHotness() {
 		return hotness;
 	}
 
-	public void setHotness(double hotness) {
+	public void setHotness(Double hotness) {
 		this.hotness = hotness;
 	}
 
-	public double getRating() {
+	public Double getRating() {
 		return rating;
 	}
 
-	public void setRating(double rating) {
+	public void setRating(Double rating) {
 		this.rating = rating;
 	}
 
@@ -416,11 +414,11 @@ public class Locality {
 		this.timeCostDesc = timeCostDesc;
 	}
 
-	public int getTimeCost() {
+	public Integer getTimeCost() {
 		return timeCost;
 	}
 
-	public void setTimeCost(int timeCost) {
+	public void setTimeCost(Integer timeCost) {
 		this.timeCost = timeCost;
 	}
 

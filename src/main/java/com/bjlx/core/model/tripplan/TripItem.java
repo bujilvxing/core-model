@@ -17,12 +17,12 @@ public class TripItem {
     /**
      * 行程项时间
      */
-    private long tripTime;
+    private Long tripTime;
 
     /**
      * 创建时间
      */
-    private long createTime;
+    private Long createTime;
 
     /**
      * 描述
@@ -57,21 +57,21 @@ public class TripItem {
     /**
      * 上一项时间，保证此项时间必须在上一项时间之后
      */
-    private long lastTripTime;
+    private Long lastTripTime;
 
-    public long getTripTime() {
+    public Long getTripTime() {
         return tripTime;
     }
 
-    public void setTripTime(long tripTime) {
+    public void setTripTime(Long tripTime) {
         this.tripTime = tripTime;
     }
 
-    public long getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(long createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
@@ -123,11 +123,11 @@ public class TripItem {
         this.shopping = shopping;
     }
 
-    public long getLastTripTime() {
+    public Long getLastTripTime() {
         return lastTripTime;
     }
 
-    public void setLastTripTime(long lastTripTime) {
+    public void setLastTripTime(Long lastTripTime) {
         this.lastTripTime = lastTripTime;
     }
 }

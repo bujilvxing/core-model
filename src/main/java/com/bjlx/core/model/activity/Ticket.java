@@ -24,7 +24,7 @@ public class Ticket {
     /**
      * 门票价格
      */
-    private double price;
+    private Double price;
 
     /**
      * 是否免费
@@ -34,7 +34,7 @@ public class Ticket {
     /**
      * 退款方式，1表示退款到平台公共账号，2表示原路返回，3表示不接受退款
      */
-    private int refundWay;
+    private Integer refundWay;
 
     /**
      * 委托平台说明
@@ -59,11 +59,11 @@ public class Ticket {
         this.id = id;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -75,11 +75,11 @@ public class Ticket {
         this.free = free;
     }
 
-    public int getRefundWay() {
+    public Integer getRefundWay() {
         return refundWay;
     }
 
-    public void setRefundWay(int refundWay) {
+    public void setRefundWay(Integer refundWay) {
         this.refundWay = refundWay;
     }
 

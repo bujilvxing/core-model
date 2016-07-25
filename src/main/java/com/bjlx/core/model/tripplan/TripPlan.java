@@ -20,12 +20,12 @@ public class TripPlan {
     /**
      * 行程规划的id
      */
-    private long ownerId;
+    private Long ownerId;
 
     /**
      * 创建时间
      */
-    private long createTime;
+    private Long createTime;
 
     /**
      * 行程项列表
@@ -35,17 +35,17 @@ public class TripPlan {
     /**
      * 转发次数
      */
-    private int shareCnt;
+    private Integer shareCnt;
 
     /**
      * 转发者id
      */
-    private long forwordId;
+    private Long forwordId;
 
     /**
      * 热度
      */
-    private double hotness;
+    private Double hotness;
 
     public ObjectId getId() {
         return id;
@@ -55,19 +55,19 @@ public class TripPlan {
         this.id = id;
     }
 
-    public long getOwnerId() {
+    public Long getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(long ownerId) {
+    public void setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
     }
 
-    public long getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(long createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
@@ -79,31 +79,31 @@ public class TripPlan {
         this.tripItems = tripItems;
     }
 
-    public int getShareCnt() {
+    public Integer getShareCnt() {
         return shareCnt;
     }
 
-    public void setShareCnt(int shareCnt) {
+    public void setShareCnt(Integer shareCnt) {
         this.shareCnt = shareCnt;
     }
 
-    public long getForwordId() {
+    public Long getForwordId() {
         return forwordId;
     }
 
-    public void setForwordId(long forwordId) {
+    public void setForwordId(Long forwordId) {
         this.forwordId = forwordId;
     }
 
-    public double getHotness() {
+    public Double getHotness() {
         return hotness;
     }
 
-    public void setHotness(double hotness) {
+    public void setHotness(Double hotness) {
         this.hotness = hotness;
     }
 
-    public TripPlan(ObjectId id, long ownerId, long createTime, List<TripItem> tripItems) {
+    public TripPlan(ObjectId id, Long ownerId, Long createTime, List<TripItem> tripItems) {
         this.id = id;
         this.ownerId = ownerId;
         this.createTime = createTime;

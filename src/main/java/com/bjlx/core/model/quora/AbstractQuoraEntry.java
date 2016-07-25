@@ -1,12 +1,9 @@
 package com.bjlx.core.model.quora;
 
-import java.util.Date;
-
-import javax.validation.constraints.NotNull;
-
+import com.bjlx.core.model.account.UserInfo;
 import org.hibernate.validator.constraints.NotBlank;
 
-import com.bjlx.core.model.account.UserInfo;
+import javax.validation.constraints.NotNull;
 
 /**
  * 问答数据的基础类
@@ -25,7 +22,7 @@ public abstract class AbstractQuoraEntry {
 	 * 发表时间戳
 	 */
 	@NotNull
-	private Date publishTime;
+	private Long publishTime;
 	
 	/**
 	 * 标题
@@ -47,11 +44,11 @@ public abstract class AbstractQuoraEntry {
 		this.author = author;
 	}
 
-	public Date getPublishTime() {
+	public Long getPublishTime() {
 		return publishTime;
 	}
 
-	public void setPublishTime(Date publishTime) {
+	public void setPublishTime(Long publishTime) {
 		this.publishTime = publishTime;
 	}
 

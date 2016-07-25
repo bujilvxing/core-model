@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class ValidationCode {
 
-    private final long interval = 60 * 1000L;
+    private final Long interval = 60 * 1000L;
 
     /**
      * 主键
@@ -28,18 +28,18 @@ public class ValidationCode {
      * 验证码创建时间
      */
     @NotNull
-    private long createTime;
+    private Long createTime;
 
     /**
      * 验证码过期时间
      */
     @NotNull
-    private long expireTime;
+    private Long expireTime;
 
     /**
      * 用于何处。1表示新用户注册，2表示重置密码，3表示绑定手机号，4表示绑定邮箱
      */
-    private int action;
+    private Integer action;
 
     /**
      * 验证码内容
@@ -65,17 +65,17 @@ public class ValidationCode {
     /**
      * 上一次发送验证码的时间
      */
-    public long lastSendTime;
+    public Long lastSendTime;
 
     /**
      * 下一次允许发送验证码的时间
      */
-    public long resendTime;
+    public Long resendTime;
 
     /**
      * 验证错误次数
      */
-    public int failCnt = 0;
+    public Integer failCnt = 0;
 
     public ObjectId getId() {
         return id;
@@ -85,27 +85,27 @@ public class ValidationCode {
         this.id = id;
     }
 
-    public long getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(long createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
-    public long getExpireTime() {
+    public Long getExpireTime() {
         return expireTime;
     }
 
-    public void setExpireTime(long expireTime) {
+    public void setExpireTime(Long expireTime) {
         this.expireTime = expireTime;
     }
 
-    public int getAction() {
+    public Integer getAction() {
         return action;
     }
 
-    public void setAction(int action) {
+    public void setAction(Integer action) {
         this.action = action;
     }
 
@@ -141,31 +141,31 @@ public class ValidationCode {
         this.used = used;
     }
 
-    public long getLastSendTime() {
+    public Long getLastSendTime() {
         return lastSendTime;
     }
 
-    public void setLastSendTime(long lastSendTime) {
+    public void setLastSendTime(Long lastSendTime) {
         this.lastSendTime = lastSendTime;
     }
 
-    public long getResendTime() {
+    public Long getResendTime() {
         return resendTime;
     }
 
-    public void setResendTime(long resendTime) {
+    public void setResendTime(Long resendTime) {
         this.resendTime = resendTime;
     }
 
-    public int getFailCnt() {
+    public Integer getFailCnt() {
         return failCnt;
     }
 
-    public void setFailCnt(int failCnt) {
+    public void setFailCnt(Integer failCnt) {
         this.failCnt = failCnt;
     }
 
-    public ValidationCode(long createTime, long expireTime, String code, String email, PhoneNumber tel) {
+    public ValidationCode(Long createTime, Long expireTime, String code, String email, PhoneNumber tel) {
         this.id = new ObjectId();
         this.createTime = createTime;
         this.expireTime = expireTime;

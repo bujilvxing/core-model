@@ -1,19 +1,17 @@
 package com.bjlx.core.model.trace;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
+import com.bjlx.core.model.misc.Audio;
+import com.bjlx.core.model.misc.ImageItem;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-import com.bjlx.core.model.misc.Audio;
-import com.bjlx.core.model.misc.ImageItem;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import java.util.Date;
+import java.util.List;
 
 /**
  * 足迹
@@ -35,7 +33,7 @@ public class Trace {
 	 */
 	@NotNull
 	@Min(value = 1)
-	private long userId;
+	private Long userId;
 	
 	/**
 	 * 所属用户的用户昵称
@@ -78,5 +76,5 @@ public class Trace {
 	/**
 	 * 状态，1表示私密可不见，2表示好友可见，3表示所有人可见
 	 */
-	private int status = 1;
+	private Integer status = 1;
 }

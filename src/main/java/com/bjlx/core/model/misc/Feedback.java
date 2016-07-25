@@ -1,12 +1,11 @@
 package com.bjlx.core.model.misc;
 
-import java.util.Date;
-
-import javax.validation.constraints.Min;
-
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Id;
+
+import javax.validation.constraints.Min;
+import java.util.Date;
 
 public class Feedback {
 
@@ -22,7 +21,7 @@ public class Feedback {
 	 */
 	@NotBlank
 	@Min(value = 1)
-	long userId;
+	Long userId;
 
 	/**
 	 * 反馈内容
@@ -47,11 +46,11 @@ public class Feedback {
 		this.id = id;
 	}
 
-	public long getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(long userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -79,7 +78,7 @@ public class Feedback {
 		this.origin = origin;
 	}
 
-	public Feedback(long userId, String body, Date time, String origin) {
+	public Feedback(Long userId, String body, Date time, String origin) {
 		super();
 		this.id = new ObjectId();
 		this.userId = userId;

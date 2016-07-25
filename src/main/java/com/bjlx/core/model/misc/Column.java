@@ -1,17 +1,16 @@
 package com.bjlx.core.model.misc;
 
-import java.util.List;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
-
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.URL;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import java.util.List;
 
 /**
  * 专栏运营位
@@ -32,7 +31,7 @@ public class Column {
 	 * 排名
 	 */
 	@Min(value = 1)
-	private int rank;
+	private Integer rank;
 	
 	/**
 	 * TODO
@@ -75,11 +74,11 @@ public class Column {
 		this.id = id;
 	}
 
-	public int getRank() {
+	public Integer getRank() {
 		return rank;
 	}
 
-	public void setRank(int rank) {
+	public void setRank(Integer rank) {
 		this.rank = rank;
 	}
 

@@ -1,17 +1,15 @@
 package com.bjlx.core.model.guide;
 
-import java.util.Date;
-import java.util.List;
-
+import com.bjlx.core.model.misc.ImageItem;
+import com.bjlx.core.model.poi.Hotel;
+import com.bjlx.core.model.poi.Restaurant;
+import com.bjlx.core.model.poi.Shopping;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-import com.bjlx.core.model.misc.ImageItem;
-import com.bjlx.core.model.poi.Hotel;
-import com.bjlx.core.model.poi.Restaurant;
-import com.bjlx.core.model.poi.Shopping;
+import java.util.List;
 
 /**
  * 攻略
@@ -40,7 +38,7 @@ class Guide {
 	/**
 	 * 更新时间
 	 */
-	private Date updateTime;
+	private Long updateTime;
 
 	/**
 	 * 攻略标题
@@ -97,11 +95,11 @@ class Guide {
 		this.images = images;
 	}
 
-	public Date getUpdateTime() {
+	public Long getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(Date updateTime) {
+	public void setUpdateTime(Long updateTime) {
 		this.updateTime = updateTime;
 	}
 

@@ -1,8 +1,7 @@
 package com.bjlx.core.model.quora;
 
-import java.util.List;
-
 import javax.validation.constraints.Min;
+import java.util.List;
 
 /**
  * 问题
@@ -31,19 +30,19 @@ public class Question extends AbstractQuoraEntry {
 	 * 问题被浏览的次数
 	 */
 	@Min(value = 0)
-	private int viewCnt;
+	private Integer viewCnt;
 	
 	/**
 	 * 问题被回答的次数
 	 */
 	@Min(value = 0)
-	private int answerCnt;
+	private Integer answerCnt;
 	
 	/**
 	 * 该问题的所有回答中，被赞的次数最高的数值
 	 */
 	@Min(value = 0)
-	private int maxVoteCnt;
+	private Integer maxVoteCnt;
 
 	public String getSource() {
 		return source;
@@ -69,31 +68,31 @@ public class Question extends AbstractQuoraEntry {
 		this.tags = tags;
 	}
 
-	public int getViewCnt() {
+	public Integer getViewCnt() {
 		return viewCnt;
 	}
 
-	public void setViewCnt(int viewCnt) {
+	public void setViewCnt(Integer viewCnt) {
 		this.viewCnt = viewCnt;
 	}
 
-	public int getAnswerCnt() {
+	public Integer getAnswerCnt() {
 		return answerCnt;
 	}
 
-	public void setAnswerCnt(int answerCnt) {
+	public void setAnswerCnt(Integer answerCnt) {
 		this.answerCnt = answerCnt;
 	}
 
-	public int getMaxVoteCnt() {
+	public Integer getMaxVoteCnt() {
 		return maxVoteCnt;
 	}
 
-	public void setMaxVoteCnt(int maxVoteCnt) {
+	public void setMaxVoteCnt(Integer maxVoteCnt) {
 		this.maxVoteCnt = maxVoteCnt;
 	}
 
-	public Question(String source, List<String> topics, List<String> tags, int viewCnt, int answerCnt, int maxVoteCnt) {
+	public Question(String source, List<String> topics, List<String> tags, Integer viewCnt, Integer answerCnt, Integer maxVoteCnt) {
 		super();
 		this.source = source;
 		this.topics = topics;

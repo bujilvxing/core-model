@@ -1,10 +1,10 @@
 package com.bjlx.core.model.misc;
 
-import javax.validation.constraints.Min;
-
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Embedded;
+
+import javax.validation.constraints.Min;
 
 @Embedded
 public class ImageItem {
@@ -31,13 +31,13 @@ public class ImageItem {
 	 * 图像宽度
 	 */
 	@Min(value = 0)
-	int width;
+	Integer width;
 
 	/**
 	 * 图像高度
 	 */
 	@Min(value = 0)
-	int height;
+	Integer height;
 
 	/**
 	 * 图像url
@@ -68,19 +68,19 @@ public class ImageItem {
 		this.bucket = bucket;
 	}
 
-	public int getWidth() {
+	public Integer getWidth() {
 		return width;
 	}
 
-	public void setWidth(int width) {
+	public void setWidth(Integer width) {
 		this.width = width;
 	}
 
-	public int getHeight() {
+	public Integer getHeight() {
 		return height;
 	}
 
-	public void setHeight(int height) {
+	public void setHeight(Integer height) {
 		this.height = height;
 	}
 
@@ -92,7 +92,7 @@ public class ImageItem {
 		this.url = url;
 	}
 
-	public ImageItem(String caption, String key, String bucket, int width, int height, String url) {
+	public ImageItem(String caption, String key, String bucket, Integer width, Integer height, String url) {
 		super();
 		this.caption = caption;
 		this.key = key;

@@ -31,7 +31,7 @@ public class Chatgroup {
      */
     @NotNull
     @Indexed(unique = true)
-    private long chatGroupId = 0;
+    private Long chatGroupId = 0L;
 
     /**
      * 名称
@@ -61,7 +61,7 @@ public class Chatgroup {
      * 创建者用户id
      */
     @NotNull
-    private long creator;
+    private Long creator;
 
     /**
      * 管理员用户id
@@ -79,19 +79,19 @@ public class Chatgroup {
     @NotNull
     @Min(value = 1)
     @Max(value = 2000)
-    private int maxUsers = 250;
+    private Integer maxUsers = 250;
 
     /**
      * 创建时间
      */
     @NotNull
-    private long createTime = 0;
+    private Long createTime = 0L;
 
     /**
      * 更新时间
      */
     @NotNull
-    private long updateTime = 0;
+    private Long updateTime = 0L;
 
     /**
      * 是否公开
@@ -102,7 +102,7 @@ public class Chatgroup {
     /**
      * 群等级
      */
-    private int level;
+    private Integer level;
 
     /**
      * 域名称，便于查询，以免输入有误
@@ -127,11 +127,11 @@ public class Chatgroup {
         this.id = id;
     }
 
-    public long getChatGroupId() {
+    public Long getChatGroupId() {
         return chatGroupId;
     }
 
-    public void setChatGroupId(long chatGroupId) {
+    public void setChatGroupId(Long chatGroupId) {
         this.chatGroupId = chatGroupId;
     }
 
@@ -167,11 +167,11 @@ public class Chatgroup {
         this.tags = tags;
     }
 
-    public long getCreator() {
+    public Long getCreator() {
         return creator;
     }
 
-    public void setCreator(long creator) {
+    public void setCreator(Long creator) {
         this.creator = creator;
     }
 
@@ -191,27 +191,27 @@ public class Chatgroup {
         this.participants = participants;
     }
 
-    public int getMaxUsers() {
+    public Integer getMaxUsers() {
         return maxUsers;
     }
 
-    public void setMaxUsers(int maxUsers) {
+    public void setMaxUsers(Integer maxUsers) {
         this.maxUsers = maxUsers;
     }
 
-    public long getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(long createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
-    public long getUpdateTime() {
+    public Long getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(long updateTime) {
+    public void setUpdateTime(Long updateTime) {
         this.updateTime = updateTime;
     }
 
@@ -223,7 +223,7 @@ public class Chatgroup {
         this.visible = visible;
     }
 
-    public Chatgroup(long chatGroupId, String name, String avatar, long creator, List<Long> participants, int maxUsers) {
+    public Chatgroup(Long chatGroupId, String name, String avatar, Long creator, List<Long> participants, Integer maxUsers) {
         this.id = new ObjectId();
         this.chatGroupId = chatGroupId;
         this.name = name;

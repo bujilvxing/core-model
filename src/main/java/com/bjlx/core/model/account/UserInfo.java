@@ -36,7 +36,7 @@ public class UserInfo {
 	 */
 	@NotNull
 	@Min(value = 1)
-	private long userId;
+	private Long userId;
 
 	/**
 	 * 用户的电话号码
@@ -59,97 +59,97 @@ public class UserInfo {
 	 * 性别
 	 * 1表示未选择，2表示男，3表示女
 	 */
-	int gender = 1;
+	private Integer gender = 1;
 
 	/**
 	 * 用户签名
 	 */
 	@Length(max = 1024)
-	String signagure;
+	private String signagure;
 
 	/**
 	 * 电子邮件
 	 */
 	@Length(max = 50)
 	@Email
-	String email;
+	private String email;
 	
 	/**
 	 * 旅客信息
 	 */
-	Map<String, RealNameInfo> travellers;
+	private Map<String, RealNameInfo> travellers;
 
 	/**
 	 * 用户的状态
 	 */
-	private int status;
+	private Integer status;
 
 	/**
 	 * 邀请码。每个人有全局唯一的一个邀请码，用于分享平台内容时奖励
 	 */
 	@NotBlank
 	@Indexed(unique = true)
-	String promotionCode;
+	private String promotionCode;
 
 	/**
 	 * 登录的状态，是否在线
 	 */
 	@NotNull
-	boolean loginStatus = false;
+	private boolean loginStatus = false;
 
 	/**
 	 * 登录时间
 	 */
 	@NotNull
-	long loginTime = 0;
+	private Long loginTime = 0L;
 
 	/**
 	 * 登出时间
 	 */
 	@NotNull
-	long logoutTime = 0;
+	private Long logoutTime = 0L;
 
 	/**
 	 * 登录设备来源
 	 */
-	List<String> loginSource = null;
+	private List<String> loginSource = null;
 
 	/**
 	 * 设备版本
 	 */
 	@Version
-	long version = 0;
+	private Long version = 0L;
 
 	/**
 	 * 用户角色。普通用户，商家等等
 	 */
-	List<Integer> roles = null;
+	private List<Integer> roles = null;
 
 	/**
 	 * 用户备注。此字段为Transient，是不存入数据库的，但是取用户数据的时候，可以将给此字段赋值，为了返回用户信息的
 	 */
 	@Transient
-	String memo = null;
+	private String memo = null;
 
 	/**
 	 * 用户的居住地
 	 */
-	String residence = null;
+	private String residence = null;
 
 	/**
 	 * 用户的生日
 	 */
-	String birthday  = null;
+	private String birthday  = null;
 
 	/**
 	 * 第三方账号的信息
 	 */
-	List<OAuthInfo> oauthInfoList = null;
+	private List<OAuthInfo> oauthInfoList = null;
 
 	/**
 	 * 用户等级
 	 */
-	private int level;
+	private Integer level;
 
 	/**
 	 * 用户足迹
@@ -174,7 +174,7 @@ public class UserInfo {
 	/**
 	 * 星座
 	 */
-	private int zodiac;
+	private Integer zodiac;
 
 	/**
 	 * 设置声音提醒
@@ -194,11 +194,11 @@ public class UserInfo {
 		this.id = id;
 	}
 
-	public long getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(long userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -226,11 +226,11 @@ public class UserInfo {
 		this.avatar = avatar;
 	}
 
-	public int getGender() {
+	public Integer getGender() {
 		return gender;
 	}
 
-	public void setGender(int gender) {
+	public void setGender(Integer gender) {
 		this.gender = gender;
 	}
 
@@ -258,11 +258,11 @@ public class UserInfo {
 		this.travellers = travellers;
 	}
 
-	public int getStatus() {
+	public Integer getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(Integer status) {
 		this.status = status;
 	}
 
@@ -282,19 +282,19 @@ public class UserInfo {
 		this.loginStatus = loginStatus;
 	}
 
-	public long getLoginTime() {
+	public Long getLoginTime() {
 		return loginTime;
 	}
 
-	public void setLoginTime(long loginTime) {
+	public void setLoginTime(Long loginTime) {
 		this.loginTime = loginTime;
 	}
 
-	public long getLogoutTime() {
+	public Long getLogoutTime() {
 		return logoutTime;
 	}
 
-	public void setLogoutTime(long logoutTime) {
+	public void setLogoutTime(Long logoutTime) {
 		this.logoutTime = logoutTime;
 	}
 
@@ -306,11 +306,11 @@ public class UserInfo {
 		this.loginSource = loginSource;
 	}
 
-	public long getVersion() {
+	public Long getVersion() {
 		return version;
 	}
 
-	public void setVersion(long version) {
+	public void setVersion(Long version) {
 		this.version = version;
 	}
 
@@ -354,7 +354,7 @@ public class UserInfo {
 		this.oauthInfoList = oauthInfoList;
 	}
 
-	public UserInfo(long userId, PhoneNumber tel, String nickName, ImageItem avatar, String email) {
+	public UserInfo(Long userId, PhoneNumber tel, String nickName, ImageItem avatar, String email) {
 		super();
 		this.id = new ObjectId();
 		this.userId = userId;

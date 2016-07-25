@@ -25,23 +25,23 @@ public class Relationship {
      * 用户A的用户id
      */
     @NotNull
-    private long userA;
+    private Long userA;
 
     /**
      * 用户B的用户id
      */
     @NotNull
-    private long userB;
+    private Long userB;
 
     /**
      * 用户A关注用户B
      */
-    private int follow;
+    private Integer follow;
 
     /**
      * 用户A将用户B拉黑
      */
-    private int block;
+    private Integer block;
 
     /**
      * 用户A备注用户B
@@ -56,35 +56,35 @@ public class Relationship {
         this.id = id;
     }
 
-    public long getUserA() {
+    public Long getUserA() {
         return userA;
     }
 
-    public void setUserA(long userA) {
+    public void setUserA(Long userA) {
         this.userA = userA;
     }
 
-    public long getUserB() {
+    public Long getUserB() {
         return userB;
     }
 
-    public void setUserB(long userB) {
+    public void setUserB(Long userB) {
         this.userB = userB;
     }
 
-    public int getFollow() {
+    public Integer getFollow() {
         return follow;
     }
 
-    public void setFollow(int follow) {
+    public void setFollow(Integer follow) {
         this.follow = follow;
     }
 
-    public int getBlock() {
+    public Integer getBlock() {
         return block;
     }
 
-    public void setBlock(int block) {
+    public void setBlock(Integer block) {
         this.block = block;
     }
 
@@ -96,7 +96,7 @@ public class Relationship {
         this.memo = memo;
     }
 
-    public Relationship(long userA, long userB) {
+    public Relationship(Long userA, Long userB) {
         this.id = new ObjectId();
         this.userA = userA;
         this.userB = userB;
