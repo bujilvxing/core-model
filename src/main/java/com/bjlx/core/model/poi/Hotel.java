@@ -3,14 +3,17 @@ package com.bjlx.core.model.poi;
 import com.bjlx.core.model.geo.Locality;
 import com.bjlx.core.model.misc.Contact;
 import com.bjlx.core.model.misc.ImageItem;
+import com.bjlx.core.model.specialservice.RentCar;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
+import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.util.List;
 
+@Entity
 public class Hotel {
 
 	/**
@@ -84,7 +87,12 @@ public class Hotel {
 	 */
 	@NotBlank
 	private String url;
-	
+
+	/**
+	 * 市场价
+	 */
+	private Double marketPrice = 0.0;
+
 	/**
 	 * POI价格
 	 */
@@ -149,7 +157,22 @@ public class Hotel {
 	 * 从属行政关系
 	 */
 	private List<Locality> locList;
-	
+
+	/**
+	 * 销售量
+	 */
+	private Integer saleVolume;
+
+	/**
+	 * 折扣
+	 */
+	private float discount;
+
+	/**
+	 * 租车
+	 */
+	private RentCar rentCar;
+
 	/**
 	 * 所在目的地
 	 */

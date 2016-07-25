@@ -1,9 +1,12 @@
 package com.bjlx.core.model.guide;
 
+import com.bjlx.core.model.activity.Activity;
 import com.bjlx.core.model.misc.ImageItem;
 import com.bjlx.core.model.poi.Hotel;
 import com.bjlx.core.model.poi.Restaurant;
 import com.bjlx.core.model.poi.Shopping;
+import com.bjlx.core.model.poi.Viewspot;
+import com.bjlx.core.model.tripplan.TripPlan;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
@@ -24,7 +27,7 @@ class Guide {
 	@NotBlank
 	@Id
 	private ObjectId id = null;
-	
+
 	/**
 	 * 封面图
 	 */
@@ -47,6 +50,15 @@ class Guide {
 	private String title;
 
 	/**
+	 * 城市简介
+	 */
+	private String desc;
+
+	private String bestTripTime;
+
+	private String tips;
+
+	/**
 	 * 攻略中去的poi
 	 */
 	private List<Hotel> hotels;
@@ -60,7 +72,22 @@ class Guide {
 	 * 攻略中的美食
 	 */
 	private List<Restaurant> restaurants;
-	
+
+	/**
+	 * 攻略中的景点
+	 */
+	private List<Viewspot> Viewspots;
+
+	/**
+	 * 攻略中的行程规划
+	 */
+	private List<TripPlan> tripPlans;
+
+	/**
+	 * 攻略中的活动
+	 */
+	private List<Activity> activities;
+
 	/**
 	 * 攻略摘要
 	 */
