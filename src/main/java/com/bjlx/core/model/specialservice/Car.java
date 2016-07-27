@@ -1,8 +1,6 @@
 package com.bjlx.core.model.specialservice;
 
 import com.bjlx.core.model.account.RealNameInfo;
-import com.bjlx.core.model.misc.Address;
-import com.bjlx.core.model.misc.Contact;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
@@ -70,29 +68,171 @@ public class Car {
     /**
      * 驱动方式
      */
-
+    private String actuationType;
 
     /**
      * 有无天窗
      */
+    private boolean dormer;
 
     /**
      * GPS导航
      */
+    private boolean gps;
 
     /**
      * 座椅
      */
+    private String seatType;
 
     /**
      * 气囊数量
      */
+    private Integer airbagNum;
 
     /**
      * 变速箱类型
      */
+    private String gearboxType;
 
     /**
-     * 空调
+     * 是否有空调
      */
+    private boolean airConditioner;
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+    public String getCarId() {
+        return carId;
+    }
+
+    public void setCarId(String carId) {
+        this.carId = carId;
+    }
+
+    public Integer getTransmission() {
+        return transmission;
+    }
+
+    public void setTransmission(Integer transmission) {
+        this.transmission = transmission;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public RealNameInfo getCarOwner() {
+        return carOwner;
+    }
+
+    public void setCarOwner(RealNameInfo carOwner) {
+        this.carOwner = carOwner;
+    }
+
+    public Float getDisplacement() {
+        return displacement;
+    }
+
+    public void setDisplacement(Float displacement) {
+        this.displacement = displacement;
+    }
+
+    public Integer getSeatNum() {
+        return seatNum;
+    }
+
+    public void setSeatNum(Integer seatNum) {
+        this.seatNum = seatNum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
+    }
+
+    public String getActuationType() {
+        return actuationType;
+    }
+
+    public void setActuationType(String actuationType) {
+        this.actuationType = actuationType;
+    }
+
+    public boolean isDormer() {
+        return dormer;
+    }
+
+    public void setDormer(boolean dormer) {
+        this.dormer = dormer;
+    }
+
+    public boolean isGps() {
+        return gps;
+    }
+
+    public void setGps(boolean gps) {
+        this.gps = gps;
+    }
+
+    public String getSeatType() {
+        return seatType;
+    }
+
+    public void setSeatType(String seatType) {
+        this.seatType = seatType;
+    }
+
+    public Integer getAirbagNum() {
+        return airbagNum;
+    }
+
+    public void setAirbagNum(Integer airbagNum) {
+        this.airbagNum = airbagNum;
+    }
+
+    public String getGearboxType() {
+        return gearboxType;
+    }
+
+    public void setGearboxType(String gearboxType) {
+        this.gearboxType = gearboxType;
+    }
+
+    public boolean isAirConditioner() {
+        return airConditioner;
+    }
+
+    public void setAirConditioner(boolean airConditioner) {
+        this.airConditioner = airConditioner;
+    }
 }
