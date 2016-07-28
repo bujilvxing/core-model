@@ -1,6 +1,7 @@
 package com.bjlx.core.model.poi;
 
 import com.bjlx.core.model.geo.Locality;
+import com.bjlx.core.model.misc.Address;
 import com.bjlx.core.model.misc.Contact;
 import com.bjlx.core.model.misc.ImageItem;
 import org.bson.types.ObjectId;
@@ -143,7 +144,7 @@ public class Restaurant {
 	 * POI地址
 	 */
 	@NotBlank
-	private String address;
+	private Address address;
 	
 	/**
 	 * 从属行政关系
@@ -331,11 +332,11 @@ public class Restaurant {
 		this.guideUrl = guideUrl;
 	}
 
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 

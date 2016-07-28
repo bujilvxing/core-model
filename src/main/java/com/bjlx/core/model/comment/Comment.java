@@ -1,11 +1,13 @@
 package com.bjlx.core.model.comment;
 
+import com.bjlx.core.model.misc.ImageItem;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Id;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 public class Comment {
 
@@ -56,6 +58,53 @@ public class Comment {
 	 */
 	@NotNull
 	private Long updateTime;
+
+	/**
+	 * 评论类型
+	 */
+	private String commentType;
+
+	/**
+	 * 评论的对象id
+	 */
+	private ObjectId itemId;
+
+	/**
+	 * 评论中附带的照片
+	 */
+	private List<ImageItem> images;
+
+	public Long getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Long updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public String getCommentType() {
+		return commentType;
+	}
+
+	public void setCommentType(String commentType) {
+		this.commentType = commentType;
+	}
+
+	public ObjectId getItemId() {
+		return itemId;
+	}
+
+	public void setItemId(ObjectId itemId) {
+		this.itemId = itemId;
+	}
+
+	public List<ImageItem> getImages() {
+		return images;
+	}
+
+	public void setImages(List<ImageItem> images) {
+		this.images = images;
+	}
 
 	public ObjectId getId() {
 		return id;

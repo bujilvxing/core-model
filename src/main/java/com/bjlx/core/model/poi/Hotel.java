@@ -178,6 +178,11 @@ public class Hotel {
 	 */
 	private Locality locality;
 
+	/**
+	 * 一段时间内可用的房间
+	 */
+	private List<AvailableDay> availableDays;
+
 	public ObjectId getId() {
 		return id;
 	}
