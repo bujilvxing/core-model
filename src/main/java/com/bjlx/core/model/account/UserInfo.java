@@ -65,7 +65,7 @@ public class UserInfo {
 	 * 用户签名
 	 */
 	@Length(max = 1024)
-	private String signagure;
+	private String signature;
 
 	/**
 	 * 电子邮件
@@ -186,6 +186,80 @@ public class UserInfo {
 	 */
 	private boolean vibrateNotify;
 
+	private String bjlxToken;
+
+	public Integer getLevel() {
+		return level;
+	}
+
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+
+	public List<Trace> getTraces() {
+		return traces;
+	}
+
+	public void setTraces(List<Trace> traces) {
+		this.traces = traces;
+	}
+
+	public List<Activity> getActivities() {
+		return activities;
+	}
+
+	public void setActivities(List<Activity> activities) {
+		this.activities = activities;
+	}
+
+	public List<TravelNote> getTravelNotes() {
+		return travelNotes;
+	}
+
+	public void setTravelNotes(List<TravelNote> travelNotes) {
+		this.travelNotes = travelNotes;
+	}
+
+	public List<TripPlan> getTripPlans() {
+		return tripPlans;
+	}
+
+	public void setTripPlans(List<TripPlan> tripPlans) {
+		this.tripPlans = tripPlans;
+	}
+
+	public Integer getZodiac() {
+		return zodiac;
+	}
+
+	public void setZodiac(Integer zodiac) {
+		this.zodiac = zodiac;
+	}
+
+	public boolean isSoundNotify() {
+		return soundNotify;
+	}
+
+	public void setSoundNotify(boolean soundNotify) {
+		this.soundNotify = soundNotify;
+	}
+
+	public boolean isVibrateNotify() {
+		return vibrateNotify;
+	}
+
+	public void setVibrateNotify(boolean vibrateNotify) {
+		this.vibrateNotify = vibrateNotify;
+	}
+
+	public String getBjlxToken() {
+		return bjlxToken;
+	}
+
+	public void setBjlxToken(String bjlxToken) {
+		this.bjlxToken = bjlxToken;
+	}
+
 	public ObjectId getId() {
 		return id;
 	}
@@ -234,12 +308,12 @@ public class UserInfo {
 		this.gender = gender;
 	}
 
-	public String getSignagure() {
-		return signagure;
+	public String getSignature() {
+		return signature;
 	}
 
-	public void setSignagure(String signagure) {
-		this.signagure = signagure;
+	public void setSignature(String signature) {
+		this.signature = signature;
 	}
 
 	public String getEmail() {
