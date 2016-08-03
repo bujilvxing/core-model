@@ -186,6 +186,8 @@ public class UserInfo {
 	 */
 	private boolean vibrateNotify;
 
+	private ImageItem backGround;
+
 	private String bjlxToken;
 
 	public Integer getLevel() {
@@ -426,6 +428,14 @@ public class UserInfo {
 
 	public void setOauthInfoList(List<OAuthInfo> oauthInfoList) {
 		this.oauthInfoList = oauthInfoList;
+	}
+
+	public ImageItem getBackGround() {
+		return backGround;
+	}
+
+	public void setBackGround(ImageItem backGround) {
+		this.backGround = backGround;
 	}
 
 	public UserInfo(Long userId, PhoneNumber tel, String nickName, ImageItem avatar, String email) {
