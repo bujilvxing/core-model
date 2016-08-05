@@ -40,7 +40,7 @@ public class Message {
     /**
      * 消息内容
      */
-    private String content;
+    private Content content;
 
     /**
      * 发送者id
@@ -107,11 +107,11 @@ public class Message {
         this.msgId = msgId;
     }
 
-    public String getContent() {
+    public Content getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(Content content) {
         this.content = content;
     }
 
