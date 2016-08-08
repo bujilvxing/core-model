@@ -166,13 +166,13 @@ public class Hotel {
 	/**
 	 * 折扣
 	 */
-	private float discount;
+	private Float discount;
 
 	/**
 	 * 租车
 	 */
 	private RentCar rentCar;
-
+	
 	/**
 	 * 所在目的地
 	 */
@@ -182,6 +182,46 @@ public class Hotel {
 	 * 一段时间内可用的房间
 	 */
 	private List<AvailableDay> availableDays;
+
+	public Double getMarketPrice() {
+		return marketPrice;
+	}
+
+	public void setMarketPrice(Double marketPrice) {
+		this.marketPrice = marketPrice;
+	}
+
+	public Integer getSaleVolume() {
+		return saleVolume;
+	}
+
+	public void setSaleVolume(Integer saleVolume) {
+		this.saleVolume = saleVolume;
+	}
+
+	public Float getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(Float discount) {
+		this.discount = discount;
+	}
+
+	public RentCar getRentCar() {
+		return rentCar;
+	}
+
+	public void setRentCar(RentCar rentCar) {
+		this.rentCar = rentCar;
+	}
+
+	public List<AvailableDay> getAvailableDays() {
+		return availableDays;
+	}
+
+	public void setAvailableDays(List<AvailableDay> availableDays) {
+		this.availableDays = availableDays;
+	}
 
 	public ObjectId getId() {
 		return id;

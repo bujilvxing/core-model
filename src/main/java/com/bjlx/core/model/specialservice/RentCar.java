@@ -53,7 +53,77 @@ public class RentCar {
     /**
      * 是否送车给租客
      */
-    private boolean sendCar;
+    private boolean pickup;
 
-    
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+	public Address getPickupAddr() {
+		return pickupAddr;
+	}
+
+	public void setPickupAddr(Address pickupAddr) {
+		this.pickupAddr = pickupAddr;
+	}
+
+	public Address getReturnAddr() {
+		return returnAddr;
+	}
+
+	public void setReturnAddr(Address returnAddr) {
+		this.returnAddr = returnAddr;
+	}
+
+	public Contact getContact() {
+		return contact;
+	}
+
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
+
+	public Integer getMinRentDay() {
+		return minRentDay;
+	}
+
+	public void setMinRentDay(Integer minRentDay) {
+		this.minRentDay = minRentDay;
+	}
+
+	public Car getCar() {
+		return car;
+	}
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
+
+	public boolean isAutoInsurance() {
+		return autoInsurance;
+	}
+
+	public void setAutoInsurance(boolean autoInsurance) {
+		this.autoInsurance = autoInsurance;
+	}
+
+	public Integer getAutoInsurancePrice() {
+		return autoInsurancePrice;
+	}
+
+	public void setAutoInsurancePrice(Integer autoInsurancePrice) {
+		this.autoInsurancePrice = autoInsurancePrice;
+	}
+
+	public boolean isPickup() {
+		return pickup;
+	}
+
+	public void setPickup(boolean pickup) {
+		this.pickup = pickup;
+	}
 }

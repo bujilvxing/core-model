@@ -14,6 +14,8 @@ import org.mongodb.morphia.annotations.Id;
 
 import java.util.List;
 
+import javax.validation.constraints.Min;
+
 /**
  * 攻略
  * Created by pengyt on 2015/10/21.
@@ -54,8 +56,14 @@ class Guide {
 	 */
 	private String desc;
 
+	/**
+	 * 最佳旅行时间
+	 */
 	private String bestTripTime;
 
+	/**
+	 * 提示
+	 */
 	private String tips;
 
 	/**
@@ -97,6 +105,82 @@ class Guide {
 	 * 攻略详情
 	 */
 	private String detailUrl;
+
+    /**
+     * 浏览次数
+     */
+    @Min(value = 0)
+    private Integer viewCnt = 0;
+
+    /**
+     * 分享次数
+     */
+    @Min(value = 0)
+    private Integer shareCnt = 0;
+    
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public String getBestTripTime() {
+		return bestTripTime;
+	}
+
+	public void setBestTripTime(String bestTripTime) {
+		this.bestTripTime = bestTripTime;
+	}
+
+	public String getTips() {
+		return tips;
+	}
+
+	public void setTips(String tips) {
+		this.tips = tips;
+	}
+
+	public List<Viewspot> getViewspots() {
+		return Viewspots;
+	}
+
+	public void setViewspots(List<Viewspot> viewspots) {
+		Viewspots = viewspots;
+	}
+
+	public List<TripPlan> getTripPlans() {
+		return tripPlans;
+	}
+
+	public void setTripPlans(List<TripPlan> tripPlans) {
+		this.tripPlans = tripPlans;
+	}
+
+	public List<Activity> getActivities() {
+		return activities;
+	}
+
+	public void setActivities(List<Activity> activities) {
+		this.activities = activities;
+	}
+
+	public Integer getViewCnt() {
+		return viewCnt;
+	}
+
+	public void setViewCnt(Integer viewCnt) {
+		this.viewCnt = viewCnt;
+	}
+
+	public Integer getShareCnt() {
+		return shareCnt;
+	}
+
+	public void setShareCnt(Integer shareCnt) {
+		this.shareCnt = shareCnt;
+	}
 
 	public ObjectId getId() {
 		return id;

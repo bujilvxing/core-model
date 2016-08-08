@@ -54,11 +54,6 @@ public class TripItem {
      */
     private Shopping shopping;
 
-    /**
-     * 上一项时间，保证此项时间必须在上一项时间之后
-     */
-    private Long lastTripTime;
-
     public Long getTripTime() {
         return tripTime;
     }
@@ -121,13 +116,5 @@ public class TripItem {
 
     public void setShopping(Shopping shopping) {
         this.shopping = shopping;
-    }
-
-    public Long getLastTripTime() {
-        return lastTripTime;
-    }
-
-    public void setLastTripTime(Long lastTripTime) {
-        this.lastTripTime = lastTripTime;
     }
 }

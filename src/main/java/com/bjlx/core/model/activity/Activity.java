@@ -84,7 +84,7 @@ public class Activity {
     /**
      * 海报
      */
-    private List<ImageItem> poster;
+    private List<ImageItem> posters;
 
     /**
      * 活动主题
@@ -209,12 +209,12 @@ public class Activity {
         this.shareCnt = shareCnt;
     }
 
-    public List<ImageItem> getPoster() {
-        return poster;
+    public List<ImageItem> getPosters() {
+        return posters;
     }
 
-    public void setPoster(List<ImageItem> poster) {
-        this.poster = poster;
+    public void setPosters(List<ImageItem> posters) {
+        this.posters = posters;
     }
 
     public String getTheme() {

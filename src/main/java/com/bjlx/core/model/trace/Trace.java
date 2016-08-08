@@ -7,7 +7,6 @@ import com.bjlx.core.model.poi.Hotel;
 import com.bjlx.core.model.poi.Restaurant;
 import com.bjlx.core.model.poi.Shopping;
 import com.bjlx.core.model.poi.Viewspot;
-import com.bjlx.core.model.tripplan.TripPlan;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
@@ -17,7 +16,6 @@ import org.mongodb.morphia.annotations.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -120,9 +118,14 @@ public class Trace {
 	private Hotel hotel;
 
 	/**
+     * 源行程规划id
+     */
+    private ObjectId originId;
+	
+	/**
 	 * 足迹原创用户id
 	 */
-	private Long originId;
+	private Long originUserId;
 
 	/**
 	 * 足迹原创用户昵称
@@ -284,11 +287,11 @@ public class Trace {
 		this.hotel = hotel;
 	}
 
-	public Long getOriginId() {
+	public ObjectId getOriginId() {
 		return originId;
 	}
 
-	public void setOriginId(Long originId) {
+	public void setOriginId(ObjectId originId) {
 		this.originId = originId;
 	}
 
@@ -323,4 +326,35 @@ public class Trace {
 	public void setLng(Double lng) {
 		this.lng = lng;
 	}
+
+	public Long getOriginUserId() {
+		return originUserId;
+	}
+
+	public void setOriginUserId(Long originUserId) {
+		this.originUserId = originUserId;
+	}
+
+	public Trace(Long userId, String nickName, ImageItem avatar) {
+		super();
+		this.id = new ObjectId();
+		this.userId = userId;
+		this.nickName = nickName;
+		this.avatar = avatar;
+	}
+
+	public Trace(Long userId, String nickName, ImageItem avatar, ObjectId originId, Long originUserId,
+			String originNickName, ImageItem originAvatar) {
+		super();
+		this.id = new ObjectId();
+		this.userId = userId;
+		this.nickName = nickName;
+		this.avatar = avatar;
+		this.originId = originId;
+		this.originUserId = originUserId;
+		this.originNickName = originNickName;
+		this.originAvatar = originAvatar;
+	}
+	
+	
 }

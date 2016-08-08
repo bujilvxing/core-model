@@ -8,7 +8,6 @@ import org.mongodb.morphia.annotations.Id;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
 import java.util.List;
 
 /**

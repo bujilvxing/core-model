@@ -1,9 +1,16 @@
 package com.bjlx.core.model.tripplan;
 
 import org.bson.types.ObjectId;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 
+import com.bjlx.core.model.misc.ImageItem;
+
 import java.util.List;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by pengyt on 2016/7/24.
@@ -16,11 +23,25 @@ public class TripPlan {
      * 主键
      */
     private ObjectId id;
-
+    
     /**
-     * 行程规划的id
-     */
-    private Long ownerId;
+	 * 行程规划所属用户的用户id
+	 */
+	@NotNull
+	@Min(value = 1)
+	private Long userId;
+	
+	/**
+	 * 行程规划所属用户的用户昵称
+	 */
+	@NotBlank
+	@Length(min = 1, max = 64)
+	private String nickName;
+	
+	/**
+	 * 行程规划所属用户的用户头像
+	 */
+	private ImageItem avatar;
 
     /**
      * 创建时间
@@ -36,11 +57,26 @@ public class TripPlan {
      * 转发次数
      */
     private Integer shareCnt;
-
+    
     /**
-     * 转发者id
+     * 源行程规划id
      */
-    private Long forwordId;
+    private ObjectId originId;
+    
+    /**
+	 * 形程规划原创用户id
+	 */
+	private Long originUserId;
+
+	/**
+	 * 形程规划原创用户昵称
+	 */
+	private String originNickName;
+
+	/**
+	 * 形程规划原创用户头像
+	 */
+	private ImageItem originAvatar;
 
     /**
      * 热度
@@ -53,14 +89,6 @@ public class TripPlan {
 
     public void setId(ObjectId id) {
         this.id = id;
-    }
-
-    public Long getOwnerId() {
-        return ownerId;
-    }
-
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
     }
 
     public Long getCreateTime() {
@@ -87,14 +115,6 @@ public class TripPlan {
         this.shareCnt = shareCnt;
     }
 
-    public Long getForwordId() {
-        return forwordId;
-    }
-
-    public void setForwordId(Long forwordId) {
-        this.forwordId = forwordId;
-    }
-
     public Double getHotness() {
         return hotness;
     }
@@ -103,10 +123,80 @@ public class TripPlan {
         this.hotness = hotness;
     }
 
-    public TripPlan(ObjectId id, Long ownerId, Long createTime, List<TripItem> tripItems) {
-        this.id = id;
-        this.ownerId = ownerId;
-        this.createTime = createTime;
-        this.tripItems = tripItems;
-    }
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public ImageItem getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(ImageItem avatar) {
+		this.avatar = avatar;
+	}
+
+	public ObjectId getOriginId() {
+		return originId;
+	}
+
+	public void setOriginId(ObjectId originId) {
+		this.originId = originId;
+	}
+
+	public String getOriginNickName() {
+		return originNickName;
+	}
+
+	public void setOriginNickName(String originNickName) {
+		this.originNickName = originNickName;
+	}
+
+	public ImageItem getOriginAvatar() {
+		return originAvatar;
+	}
+
+	public void setOriginAvatar(ImageItem originAvatar) {
+		this.originAvatar = originAvatar;
+	}
+
+	public Long getOriginUserId() {
+		return originUserId;
+	}
+
+	public void setOriginUserId(Long originUserId) {
+		this.originUserId = originUserId;
+	}
+
+	public TripPlan(Long userId, String nickName, ImageItem avatar) {
+		super();
+		this.id = new ObjectId();
+		this.userId = userId;
+		this.nickName = nickName;
+		this.avatar = avatar;
+	}
+
+	public TripPlan(Long userId, String nickName, ImageItem avatar, ObjectId originId, Long originUserId,
+			String originNickName, ImageItem originAvatar) {
+		super();
+		this.id = new ObjectId();
+		this.userId = userId;
+		this.nickName = nickName;
+		this.avatar = avatar;
+		this.originId = originId;
+		this.originUserId = originUserId;
+		this.originNickName = originNickName;
+		this.originAvatar = originAvatar;
+	}
 }
