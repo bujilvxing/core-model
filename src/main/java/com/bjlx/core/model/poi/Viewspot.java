@@ -1,5 +1,6 @@
 package com.bjlx.core.model.poi;
 
+import com.bjlx.core.model.activity.Ticket;
 import com.bjlx.core.model.geo.Locality;
 import com.bjlx.core.model.misc.Address;
 import com.bjlx.core.model.misc.Contact;
@@ -98,11 +99,6 @@ public class Viewspot {
 	 * POI价格描述
 	 */
 	private String priceDesc;
-
-	/**
-	 * POI描述
-	 */
-	private String desc;
 
 	/**
 	 * 开放时间描述
@@ -268,14 +264,6 @@ public class Viewspot {
 
 	public void setPriceDesc(String priceDesc) {
 		this.priceDesc = priceDesc;
-	}
-
-	public String getDesc() {
-		return desc;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
 	}
 
 	public String getOpenTime() {

@@ -29,7 +29,7 @@ public class Ticket {
     /**
      * 是否免费
      */
-    private boolean free;
+    private Boolean free;
 
     /**
      * 退款方式，1表示退款到平台公共账号，2表示原路返回，3表示不接受退款
@@ -67,11 +67,11 @@ public class Ticket {
         this.price = price;
     }
 
-    public boolean isFree() {
+    public Boolean isFree() {
         return free;
     }
 
-    public void setFree(boolean free) {
+    public void setFree(Boolean free) {
         this.free = free;
     }
 
@@ -107,7 +107,7 @@ public class Ticket {
         this.maxNum = maxNum;
     }
 
-    public Ticket(boolean free, String maxNum) {
+    public Ticket(Boolean free, String maxNum) {
         this.id = new ObjectId();
         this.free = free;
         this.maxNum = maxNum;

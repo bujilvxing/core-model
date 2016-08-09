@@ -1,5 +1,6 @@
 package com.bjlx.core.model.geo;
 
+import com.bjlx.core.model.activity.Activity;
 import com.bjlx.core.model.misc.ImageItem;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
@@ -92,14 +93,9 @@ public class Locality {
 	private List<DetailsEntry> cuisines;
 
 	/**
-	 * 活动综述
-	 */
-	private String activityIntro;
-
-	/**
 	 * 活动
 	 */
-	private List<DetailsEntry> activities;
+	private List<Activity> activities;
 
 	/**
 	 * 小贴士
@@ -286,19 +282,11 @@ public class Locality {
 		this.cuisines = cuisines;
 	}
 
-	public String getActivityIntro() {
-		return activityIntro;
-	}
-
-	public void setActivityIntro(String activityIntro) {
-		this.activityIntro = activityIntro;
-	}
-
-	public List<DetailsEntry> getActivities() {
+	public List<Activity> getActivities() {
 		return activities;
 	}
 
-	public void setActivities(List<DetailsEntry> activities) {
+	public void setActivities(List<Activity> activities) {
 		this.activities = activities;
 	}
 

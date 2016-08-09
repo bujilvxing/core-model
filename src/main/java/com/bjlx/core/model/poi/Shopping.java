@@ -98,11 +98,6 @@ public class Shopping {
 	private String priceDesc;
 	
 	/**
-	 * POI描述
-	 */
-	private String desc;
-	
-	/**
 	 * 开放时间描述
 	 */
 	private String openTime;
@@ -266,14 +261,6 @@ public class Shopping {
 
 	public void setPriceDesc(String priceDesc) {
 		this.priceDesc = priceDesc;
-	}
-
-	public String getDesc() {
-		return desc;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
 	}
 
 	public String getOpenTime() {

@@ -96,12 +96,7 @@ public class Restaurant {
 	 * POI价格描述
 	 */
 	private String priceDesc;
-	
-	/**
-	 * POI描述
-	 */
-	private String desc;
-	
+
 	/**
 	 * 开放时间描述
 	 */
@@ -155,6 +150,11 @@ public class Restaurant {
 	 * 所在目的地
 	 */
 	private Locality locality;
+
+	/**
+	 * 销量
+	 */
+	private Integer saleVolume;
 
 	public ObjectId getId() {
 		return id;
@@ -268,14 +268,6 @@ public class Restaurant {
 		this.priceDesc = priceDesc;
 	}
 
-	public String getDesc() {
-		return desc;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-
 	public String getOpenTime() {
 		return openTime;
 	}
@@ -354,5 +346,13 @@ public class Restaurant {
 
 	public void setLocality(Locality locality) {
 		this.locality = locality;
+	}
+
+	public Integer getSaleVolume() {
+		return saleVolume;
+	}
+
+	public void setSaleVolume(Integer saleVolume) {
+		this.saleVolume = saleVolume;
 	}
 }
