@@ -43,17 +43,17 @@ public class RentCar {
     /**
      * 是否可以买车险
      */
-    private boolean  autoInsurance;
+    private Boolean autoInsurance;
 
     /**
      * 车险价格
      */
-    private Integer  autoInsurancePrice;
+    private Integer autoInsurancePrice;
 
     /**
      * 是否送车给租客
      */
-    private boolean pickup;
+    private Boolean pickup;
 
 	public Integer getPrice() {
 		return price;
@@ -103,11 +103,11 @@ public class RentCar {
 		this.car = car;
 	}
 
-	public boolean isAutoInsurance() {
+	public Boolean isAutoInsurance() {
 		return autoInsurance;
 	}
 
-	public void setAutoInsurance(boolean autoInsurance) {
+	public void setAutoInsurance(Boolean autoInsurance) {
 		this.autoInsurance = autoInsurance;
 	}
 
@@ -119,11 +119,11 @@ public class RentCar {
 		this.autoInsurancePrice = autoInsurancePrice;
 	}
 
-	public boolean isPickup() {
+	public Boolean isPickup() {
 		return pickup;
 	}
 
-	public void setPickup(boolean pickup) {
+	public void setPickup(Boolean pickup) {
 		this.pickup = pickup;
 	}
 }

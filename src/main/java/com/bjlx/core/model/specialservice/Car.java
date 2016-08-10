@@ -64,21 +64,26 @@ public class Car {
      * 燃料。例如：汽油、天然气、电
      */
     private String fuelType;
+    
+    /**
+     * 93号,95号,97号等汽油
+     */
+    private String gasolineType;
 
     /**
-     * 驱动方式
+     * 驱动方式。前驱，后驱，前后驱
      */
     private String actuationType;
 
     /**
      * 有无天窗
      */
-    private boolean dormer;
+    private Boolean dormer;
 
     /**
      * GPS导航
      */
-    private boolean gps;
+    private Boolean gps;
 
     /**
      * 座椅
@@ -98,7 +103,7 @@ public class Car {
     /**
      * 是否有空调
      */
-    private boolean airConditioner;
+    private Boolean airConditioner;
 
     public ObjectId getId() {
         return id;
@@ -188,19 +193,19 @@ public class Car {
         this.actuationType = actuationType;
     }
 
-    public boolean isDormer() {
+    public Boolean isDormer() {
         return dormer;
     }
 
-    public void setDormer(boolean dormer) {
+    public void setDormer(Boolean dormer) {
         this.dormer = dormer;
     }
 
-    public boolean isGps() {
+    public Boolean isGps() {
         return gps;
     }
 
-    public void setGps(boolean gps) {
+    public void setGps(Boolean gps) {
         this.gps = gps;
     }
 
@@ -228,11 +233,33 @@ public class Car {
         this.gearboxType = gearboxType;
     }
 
-    public boolean isAirConditioner() {
+    public Boolean isAirConditioner() {
         return airConditioner;
     }
 
-    public void setAirConditioner(boolean airConditioner) {
+    public void setAirConditioner(Boolean airConditioner) {
         this.airConditioner = airConditioner;
     }
+
+	public String getGasolineType() {
+		return gasolineType;
+	}
+
+	public void setGasolineType(String gasolineType) {
+		this.gasolineType = gasolineType;
+	}
+
+	public Boolean getDormer() {
+		return dormer;
+	}
+
+	public Boolean getGps() {
+		return gps;
+	}
+
+	public Boolean getAirConditioner() {
+		return airConditioner;
+	}
+    
+    
 }

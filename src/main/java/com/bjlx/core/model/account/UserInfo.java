@@ -186,8 +186,14 @@ public class UserInfo {
 	 */
 	private boolean vibrateNotify;
 
+	/**
+	 * 背景图片
+	 */
 	private ImageItem backGround;
 
+	/**
+	 * 动态口令
+	 */
 	private String bjlxToken;
 
 	public Integer getLevel() {
