@@ -103,7 +103,7 @@ public class TravelNote {
 	/**
 	 * 是否为精华游记
 	 */
-	private boolean essence = false;
+	private Boolean essence = false;
 
 	public ObjectId getId() {
 		return id;
@@ -225,17 +225,17 @@ public class TravelNote {
 		this.source = source;
 	}
 
-	public boolean isEssence() {
+	public Boolean isEssence() {
 		return essence;
 	}
 
-	public void setEssence(boolean essence) {
+	public void setEssence(Boolean essence) {
 		this.essence = essence;
 	}
 
 	public TravelNote(ObjectId id, ImageItem cover, List<ImageItem> images, Double hotness, String title,
 			Date publishTime, Integer commentCnt, Long travelTime, String summary, List<Map<String, String>> contents,
-			String source, boolean essence) {
+			String source, Boolean essence) {
 		super();
 		this.id = id;
 		this.cover = cover;

@@ -1,5 +1,10 @@
 package com.bjlx.core.model.quora;
 
+import org.bson.types.ObjectId;
+import org.hibernate.validator.constraints.NotBlank;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
 import javax.validation.constraints.Min;
 import java.util.List;
 
@@ -8,7 +13,15 @@ import java.util.List;
  * @author xiaozhi
  *
  */
+@Entity
 public class Question extends AbstractQuoraEntry {
+
+	/**
+	 * 主键
+	 */
+	@NotBlank
+	@Id
+	private ObjectId id;
 
 	/**
 	 * 问题的来源
@@ -43,6 +56,14 @@ public class Question extends AbstractQuoraEntry {
 	 */
 	@Min(value = 0)
 	private Integer maxVoteCnt;
+
+	public ObjectId getId() {
+		return id;
+	}
+
+	public void setId(ObjectId id) {
+		this.id = id;
+	}
 
 	public String getSource() {
 		return source;

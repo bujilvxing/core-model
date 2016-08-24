@@ -118,7 +118,31 @@ public class Trace {
 	private Hotel hotel;
 
 	/**
-     * 源行程规划id
+	 * 收藏次数
+	 */
+	@Min(value = 0)
+	private Integer favorCnt = 0;
+
+	/**
+	 * 评论次数
+	 */
+	@Min(value = 0)
+	private Integer commentCnt = 0;
+
+	/**
+	 * 浏览次数
+	 */
+	@Min(value = 0)
+	private Integer viewCnt = 0;
+
+	/**
+	 * 转发次数
+	 */
+	@Min(value = 0)
+	private Integer shareCnt = 0;
+
+	/**
+     * 源足迹id
      */
     private ObjectId originId;
 	
@@ -333,6 +357,38 @@ public class Trace {
 
 	public void setOriginUserId(Long originUserId) {
 		this.originUserId = originUserId;
+	}
+
+	public Integer getFavorCnt() {
+		return favorCnt;
+	}
+
+	public void setFavorCnt(Integer favorCnt) {
+		this.favorCnt = favorCnt;
+	}
+
+	public Integer getCommentCnt() {
+		return commentCnt;
+	}
+
+	public void setCommentCnt(Integer commentCnt) {
+		this.commentCnt = commentCnt;
+	}
+
+	public Integer getViewCnt() {
+		return viewCnt;
+	}
+
+	public void setViewCnt(Integer viewCnt) {
+		this.viewCnt = viewCnt;
+	}
+
+	public Integer getShareCnt() {
+		return shareCnt;
+	}
+
+	public void setShareCnt(Integer shareCnt) {
+		this.shareCnt = shareCnt;
 	}
 
 	public Trace(Long userId, String nickName, ImageItem avatar) {

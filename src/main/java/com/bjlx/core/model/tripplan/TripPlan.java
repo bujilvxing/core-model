@@ -48,15 +48,39 @@ public class TripPlan {
      */
     private Long createTime;
 
+	/**
+	 * 更新时间
+	 */
+	private Long updateTime;
+
     /**
      * 行程项列表
      */
     private List<TripItem> tripItems;
 
-    /**
-     * 转发次数
-     */
-    private Integer shareCnt;
+	/**
+	 * 收藏次数
+	 */
+	@Min(value = 0)
+	private Integer favorCnt = 0;
+
+	/**
+	 * 评论次数
+	 */
+	@Min(value = 0)
+	private Integer commentCnt = 0;
+
+	/**
+	 * 浏览次数
+	 */
+	@Min(value = 0)
+	private Integer viewCnt = 0;
+
+	/**
+	 * 转发次数
+	 */
+	@Min(value = 0)
+	private Integer shareCnt = 0;
     
     /**
      * 源行程规划id
@@ -177,6 +201,38 @@ public class TripPlan {
 
 	public void setOriginUserId(Long originUserId) {
 		this.originUserId = originUserId;
+	}
+
+	public Long getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Long updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public Integer getFavorCnt() {
+		return favorCnt;
+	}
+
+	public void setFavorCnt(Integer favorCnt) {
+		this.favorCnt = favorCnt;
+	}
+
+	public Integer getCommentCnt() {
+		return commentCnt;
+	}
+
+	public void setCommentCnt(Integer commentCnt) {
+		this.commentCnt = commentCnt;
+	}
+
+	public Integer getViewCnt() {
+		return viewCnt;
+	}
+
+	public void setViewCnt(Integer viewCnt) {
+		this.viewCnt = viewCnt;
 	}
 
 	public TripPlan(Long userId, String nickName, ImageItem avatar) {
