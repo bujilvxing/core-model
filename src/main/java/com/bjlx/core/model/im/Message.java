@@ -83,6 +83,8 @@ public class Message {
      */
     private List<Long> receiverIdList;
 
+    private Integer chatType;
+
     public ObjectId getId() {
         return id;
     }
@@ -177,5 +179,13 @@ public class Message {
 
     public void setReceiverIdList(List<Long> receiverIdList) {
         this.receiverIdList = receiverIdList;
+    }
+
+    public Integer getChatType() {
+        return chatType;
+    }
+
+    public void setChatType(Integer chatType) {
+        this.chatType = chatType;
     }
 }

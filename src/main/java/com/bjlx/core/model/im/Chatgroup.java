@@ -97,7 +97,7 @@ public class Chatgroup {
      * 是否公开
      */
     @NotNull
-    private boolean visible = true;
+    private Boolean visible = true;
 
     /**
      * 群等级
@@ -215,11 +215,11 @@ public class Chatgroup {
         this.updateTime = updateTime;
     }
 
-    public boolean isVisible() {
+    public Boolean isVisible() {
         return visible;
     }
 
-    public void setVisible(boolean visible) {
+    public void setVisible(Boolean visible) {
         this.visible = visible;
     }
 
