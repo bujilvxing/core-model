@@ -73,7 +73,7 @@ public class Post {
     private Integer shareCnt = 0;
 
     /**
-     * 游记摘要
+     * 帖子摘要
      */
     @NotBlank
     String summary;
@@ -82,6 +82,7 @@ public class Post {
      * 帖子详情
      */
     private String content;
+    
     /**
      * 排名
      */

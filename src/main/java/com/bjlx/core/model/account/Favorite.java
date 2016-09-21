@@ -1,6 +1,7 @@
 package com.bjlx.core.model.account;
 
 import com.bjlx.core.model.activity.Activity;
+import com.bjlx.core.model.im.Post;
 import com.bjlx.core.model.marketplace.Commodity;
 import com.bjlx.core.model.misc.TravelNote;
 import com.bjlx.core.model.poi.Hotel;
@@ -40,6 +41,11 @@ public class Favorite {
 	@Min(value = 1)
 	private Long userId;
 
+	/**
+	 * 用户收藏的帖子
+	 */
+	private List<Post> posts;
+	
 	/**
 	 * 用户收藏的足迹
 	 */
@@ -173,4 +179,13 @@ public class Favorite {
 	public void setViewspots(List<Viewspot> viewspots) {
 		this.viewspots = viewspots;
 	}
+
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+	
 }

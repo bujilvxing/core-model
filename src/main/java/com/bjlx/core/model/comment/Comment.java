@@ -34,12 +34,12 @@ public class Comment {
 	/**
 	 * 用户头像
 	 */
-	private String authorAvatar;
+	private ImageItem avatar;
 
 	/**
 	 * 用户昵称
 	 */
-	private String authorName;
+	private String name;
 
 	/**
 	 * 评价的详情
@@ -62,7 +62,7 @@ public class Comment {
 	/**
 	 * 评论类型
 	 */
-	private String commentType;
+	private Integer commentType;
 
 	/**
 	 * 评论的对象id
@@ -82,11 +82,11 @@ public class Comment {
 		this.updateTime = updateTime;
 	}
 
-	public String getCommentType() {
+	public Integer getCommentType() {
 		return commentType;
 	}
 
-	public void setCommentType(String commentType) {
+	public void setCommentType(Integer commentType) {
 		this.commentType = commentType;
 	}
 
@@ -130,20 +130,20 @@ public class Comment {
 		this.userId = userId;
 	}
 
-	public String getAuthorAvatar() {
-		return authorAvatar;
+	public ImageItem getAvatar() {
+		return avatar;
 	}
 
-	public void setAuthorAvatar(String authorAvatar) {
-		this.authorAvatar = authorAvatar;
+	public void setAvatar(ImageItem avatar) {
+		this.avatar = avatar;
 	}
 
-	public String getAuthorName() {
-		return authorName;
+	public String getName() {
+		return name;
 	}
 
-	public void setAuthorName(String authorName) {
-		this.authorName = authorName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getContents() {
