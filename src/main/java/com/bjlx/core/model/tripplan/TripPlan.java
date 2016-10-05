@@ -53,6 +53,21 @@ public class TripPlan {
 	 */
 	private Long updateTime;
 
+	/**
+	 * 标题
+	 */
+	private String title;
+
+	/**
+	 * 描述
+	 */
+	private String desc;
+
+	/**
+	 * 封面
+	 */
+	private ImageItem cover;
+
     /**
      * 行程项列表
      */
@@ -233,6 +248,30 @@ public class TripPlan {
 
 	public void setViewCnt(Integer viewCnt) {
 		this.viewCnt = viewCnt;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public ImageItem getCover() {
+		return cover;
+	}
+
+	public void setCover(ImageItem cover) {
+		this.cover = cover;
 	}
 
 	public TripPlan(Long userId, String nickName, ImageItem avatar) {

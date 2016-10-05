@@ -81,7 +81,12 @@ public class Trace {
 	 * 语音描述
 	 */
 	private Audio audio;
-	
+
+	/**
+	 * 标题
+	 */
+	private String title;
+
 	/**
 	 * 文字描述
 	 */
@@ -389,6 +394,14 @@ public class Trace {
 
 	public void setShareCnt(Integer shareCnt) {
 		this.shareCnt = shareCnt;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public Trace(Long userId, String nickName, ImageItem avatar) {
