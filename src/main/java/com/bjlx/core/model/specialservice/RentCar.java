@@ -2,6 +2,8 @@ package com.bjlx.core.model.specialservice;
 
 import com.bjlx.core.model.misc.Address;
 import com.bjlx.core.model.misc.Contact;
+
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 
 /**
@@ -10,6 +12,11 @@ import org.mongodb.morphia.annotations.Entity;
 @Entity
 public class RentCar {
 
+	/**
+	 * 主键
+	 */
+	private ObjectId id;
+	
     /**
      * 价格
      */
@@ -54,6 +61,23 @@ public class RentCar {
      * 是否送车给租客
      */
     private Boolean pickup;
+
+    
+	public ObjectId getId() {
+		return id;
+	}
+
+	public void setId(ObjectId id) {
+		this.id = id;
+	}
+
+	public Boolean getAutoInsurance() {
+		return autoInsurance;
+	}
+
+	public Boolean getPickup() {
+		return pickup;
+	}
 
 	public Integer getPrice() {
 		return price;

@@ -1,5 +1,8 @@
 package com.bjlx.core.model.im;
 
+import org.mongodb.morphia.annotations.Embedded;
+
+@Embedded
 public class Emoticon {
 
 	private String id;

@@ -3,11 +3,14 @@ package com.bjlx.core.model.misc;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
+import org.mongodb.morphia.annotations.Embedded;
+
 /**
  * 位置信息
  * @author xiaozhi
  *
  */
+@Embedded
 public class Position {
 
 	/**

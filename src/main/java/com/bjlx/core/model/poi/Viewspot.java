@@ -1,6 +1,5 @@
 package com.bjlx.core.model.poi;
 
-import com.bjlx.core.model.activity.Ticket;
 import com.bjlx.core.model.geo.Locality;
 import com.bjlx.core.model.misc.Address;
 import com.bjlx.core.model.misc.Contact;

@@ -2,11 +2,13 @@ package com.bjlx.core.model.misc;
 
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotBlank;
+import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
 import javax.validation.constraints.Min;
 import java.util.Date;
 
+@Entity
 public class Feedback {
 
 	/**

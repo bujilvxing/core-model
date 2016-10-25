@@ -21,7 +21,7 @@ import javax.validation.constraints.Min;
  * Created by pengyt on 2015/10/21.
  */
 @Entity
-class Guide {
+public class Guide {
 
 	/**
 	 * 主键
